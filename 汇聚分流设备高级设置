@@ -1,0 +1,6 @@
+正交：设备中的不同模块解耦
+例如：
+路由模块独立
+ACL 模块独立（Access Control List）
+QoS 模块独立（Quality of Service）（常见流程：分类、标记、调度、限速）
+改 ACL 不影响路由决策

@@ -1,3 +1,4 @@
+专注于以太层网络测试，报文从MAC层开始构建，覆盖L2~L4的流量测试工具；性能测试，偏底层
 是Ixia的windowsUI测试界面,通过构建数据包来测试网络
 通常单用户只操作一个port(chassis->card->port)
 通过上方栏MultiUser来login、logout、take port ownership
@@ -5,3 +6,4 @@
 对port右键，然后看property中的general部分，可以调整为internal loopback（常用的回环测试环境）
 在Packet Streams中右键，可以New Stream
 通过双击改变Stream设置
+DA/SA是以太层的目的地址和源地址

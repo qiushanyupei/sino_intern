@@ -1,0 +1,5 @@
+Ethernet：14 字节（不含 VLAN）
+VLAN：4 字节（可选）
+IPv4：20 字节（可变，含 options）
+TCP：20 字节（可变，含 options）
+UDP：8 字节

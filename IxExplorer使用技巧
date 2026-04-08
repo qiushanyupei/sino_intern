@@ -4,3 +4,4 @@
 对于要测试的port要指定IP，公司的内网IP是192.168.27.xxx，可以使用例如192.168.27.12
 对port右键，然后看property中的general部分，可以调整为internal loopback（常用的回环测试环境）
 在Packet Streams中右键，可以New Stream
+通过双击改变Stream设置

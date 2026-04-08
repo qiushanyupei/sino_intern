@@ -10,4 +10,7 @@ Frame Data相关设置
 DA/SA是以太层的目的地址和源地址
 Protocal中的force error可以强制制造错误，让网路分析工具进行检测
 Table UDF（User Defined Field）中可以新增用户自定义字段（十六进制、IPV4等数据格式）（包括自定义offset）
-在特定的UDF中如何设置，Type可以设置这个数据所占比特的大小，chainform可以和其他自定义字段组合一起嵌入？
+在特定的UDF中如何设置，Mode可以设置数据变化的方式，包括Counter（计数器模式、值列表模式（从用户定义的一组固定值中循环取值）、范围列表模式（可以定义多个连续范围，每个范围内生成递增值））Type可以设置这个数据所占比特的大小，chainform可以和其他自定义字段组合一起嵌入？
+Stream Control有很多种不同形式的控制：
+Continuous Packet：连续不断地发包
+Continuous Burst：流量以突发（Burst）形式连续发送，每个突发包含指定数量的包，然后暂停，接着再发送下一个突发。

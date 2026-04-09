@@ -1,0 +1,1 @@
+通过DPI(Deep Packet Inspection（深度包检测）):不仅看头部，还要深入到报文的数据负载部分（Payload）

@@ -1,0 +1,5 @@
+linux系统：Euler
+ip:192.168.27.219
+用户名：super
+密码：123456
+ssh登录命令：ssh 用户名@ip

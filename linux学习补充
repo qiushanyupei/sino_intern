@@ -1,1 +1,2 @@
 ls默认命令不能显示隐藏文件夹（.开头的），ls -a可以显示
+ifconfig中显示的mtu表示Maximum Transmission Unit（最大传输单元），通常以字节为单位

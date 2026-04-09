@@ -22,3 +22,4 @@
 5、突发与过载测试 (Burst & Overload)
 6、长稳测试 (Soak / Endurance)：模拟真实网络长期运行
 7、有状态流量测试 (Stateful)：区别于普通 UDP 无状态测试，模拟 TCP 会话。
+

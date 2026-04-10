@@ -1,1 +1,3 @@
 GE = Gigabit（10^9 bit） Ethernet = 千兆以太网接口，在这里一兆是指10^6
+RJ45，带弹片的塑料接口
+console口通常为串口，MGMT通常为网口

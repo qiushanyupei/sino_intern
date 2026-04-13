@@ -1,0 +1,8 @@
+NP总控机有一台的ip是177，可以通过ssh连接
+可以通过sfc.local restart查看信息（例如NP数量、NP的ip）
+通过shell进入super账号然后sudo su进入root账号
+通过check_critical.sh -a重新启动/重新加载？（反正可以查看一些状态）
+用telnet连接单个NP卡,和ip 177相关的槽口ip分别是126.0.0.1~一直到8(好像还有更多槽口)
+单个NP的账号密码都是admin 
+通过get device info查看软硬件版本信息；或者直接通过cpld read 0或者cpld read 1读取cpld寄存器内版本
+将单个NP卡插入机框（反正是有主控板、背板、风扇的东西）（分流汇聚机上不做复杂处理，所以不在分流汇聚机上），记住引脚向下，最后通过按住滑动装置按死

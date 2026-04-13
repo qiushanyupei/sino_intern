@@ -1,0 +1,2 @@
+NP总控机有一台的ip是177，可以通过ssh连接
+可以通过sfc.loacl restart查看信息

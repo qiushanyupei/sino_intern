@@ -1,0 +1,1 @@
+TCP头部：（1）源端口 / 目的端口（2）序列号（Sequence Number）（3）确认号（Acknowledgment Number）（4）数据偏移（Header Length）（5）控制标志位（Flags）（6）窗口大小（Window Size）（7）校验和（Checksum）（8）紧急指针（Urgent Pointer）

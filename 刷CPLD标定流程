@@ -6,3 +6,4 @@
 用终端工具进行串口连接，如果串口线连接正常，那么windterm会自动出现串口号
 数据选择text；协议中的波特率选择115200
 进shell模式，hwi-cmd后面可以看cpld0和cpld1;cpld1要看rw0和rw1；cpld0只要看一个
+cpld0存储版本日时相关信息，cpld1存储版本年月相关信息

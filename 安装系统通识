@@ -1,1 +1,3 @@
 安装新的M4软件和BIOS都是存储在flash中
+重启时enter Setup是进入BIOS；Boot Options是打开临时启动菜单（临时决定通过U盘/windows/。。。启动，不影响BIOS默认设置）；PXE（pre-exectuable environment） Boot是通过网络启动，通过网络上的服务器下载并启动一个迷你操作系统或安装环境。
+选择F2,F4,F12之前是CPU 复位与初始化；POST（Power-On Self Test，加电自检）；初始化基本硬件

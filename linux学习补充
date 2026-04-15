@@ -1,2 +1,3 @@
 ls默认命令不能显示隐藏文件夹（.开头的），ls -a可以显示全部，ls -l可以显示详细信息，ls -al可以显示全部详细信息
 ifconfig中显示的mtu表示Maximum Transmission Unit（最大传输单元），通常以字节为单位
+SELinux：Security-Enhanced Linux（安全增强型 Linux）， Linux 内核中的一个强制访问控制（MAC，Mandatory Access Control）安全模块。用于避免root账号被攻击情况，限制了root账号权限。

@@ -1,1 +1,21 @@
 主要内容分为.service文件和bash脚本文件
+一个github上通过重启设备来测试设备稳定性的bash脚本
+https://github.com/xichaoli/reboot_test_tools/tree/main
+有定义systemd服务文件（以d结尾指daemon守护进程）（通常，标准后缀为.service）。
+systemd文件为INI格式（ [Section] 分组，Key=Value 形式）。
+Unit Section:
+除了定义desc还可以定义强/弱依赖，前置后置动作，冲突状态
+
+Service section:
+Type参数设为simple(有systemd后的模式)（ExecStart启动为主进程（通过systemctl status查看）），其他可选值：forking(fork子进程父进程exit)、oneshot（一次性）、notify（服务启动完成通知systemd）
+注：fork解决的是普通进程权限小的问题，属于创建新进程的系统调用（用户空间调用，内核空间执行）（不同系统系统调用常不兼容）
+fork是对父进程的完全复制，包括CPU状态和程序计数器（非从开头执行）以2的指数级复制进程
+execv（path,argv....）是对原进程的替代（清空栈、堆、数据）（当前CPU状态后的原进程不会执行）
+linux/unix中通过fork+execv结合创建新进程（fork后通过判断pid决定是否执行execv）
+windows中创建新进程的系统调用需要full_path和其他参数，然后插入进程到调度器中。
+ExecStart参数是要执行脚本的绝对路径
+KillMode参数=process即当执行 systemctl stop 时，只杀死主进程（脚本本身），不杀它的子进程。其他参数：control-group（默认）：杀死整个控制组的所有进程（包括主进程和其子进程）、mixed：先发 SIGTERM（signal terminate）(进程收到信号进行清理工作) 给主进程，再杀控制组、none
+
+install section:
+WantedBy参数控制service文件enable后，在什么模式自启动该服务（xxx.tartget）（依赖链）。常见有multi-user（多用户命令行模式）、graphical、reboot、poweroff
+用户通过systemctl交互。

@@ -3,3 +3,7 @@
 通过add port占用，然后->OK，退出
 然后左边栏Traffic->一般是Add L2-3 Traffic Items
 Endpoints内设置Type of Traffic为Raw，可以source port 和destination port
+Packet/Qos内可以新增数据帧中包含的协议头部，可以转换为stack diagram（栈式视图）
+Flow Group Setup
+Frame setup中可以调整帧的大小
+Rate setup中可以调整速率大小

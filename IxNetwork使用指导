@@ -1,0 +1,5 @@
+三楼中间仪表ip是192.168.27.10
+有8个口，支持400G
+通过add port占用，然后->OK，退出
+然后左边栏Traffic->一般是Add L2-3 Traffic Items
+Endpoints内设置Type of Traffic为Raw，可以source port 和destination port

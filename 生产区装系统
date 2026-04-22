@@ -40,3 +40,19 @@ hostname设置为：Sino-Telecom
 密码：123456
 
 先设置ip才能设置mac地址，左侧标签是底板版本（左上PN号，左下SN号，右侧mac地址），右侧标签是CPU版本
+
+装错版本后重装系统：
+先reboot
+然后空格打断重启（hit any to stop autoboot）
+env default -a 
+saveenv
+reset 
+再回车就会重启
+cd /app/
+rm -rf *
+cd /flash/
+rm -rf *
+然后再reboot
+登录后重新
+ifconfig eth1 192.168.1.200
+然后再跑脚本装系统

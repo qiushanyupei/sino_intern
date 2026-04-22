@@ -21,6 +21,7 @@ ifconfig eth1 192.168.1.200（配置设备的网卡）ipconfig只是暂时设置
 chmod +x update_1043_flash.sh（里面有升级kernel、BSP、uboot的所有命令，所以用它）
 	然后执行
 ./update_1043_flash.sh
+重启后确认版本
 
 6、开始装系统前置
 下载ubuntu18.04版本相关系统压缩包

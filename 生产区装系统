@@ -51,7 +51,7 @@ reset
 cd /app/
 rm -rf *
 cd /flash/
-rm -rf *
+rm -rf *（删除不掉的是设备自带的文件）
 然后再reboot
 登录后重新
 ifconfig eth1 192.168.1.200

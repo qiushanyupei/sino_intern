@@ -1,0 +1,23 @@
+首先是对于固件版本的确认和升级
+
+登录
+1、root
+Net@st&l
+
+2、reboot查看BSP软件版本（看BL2）
+查看kernel版本
+uname -a 
+查看uboot版本
+fw_printenv | grep version
+	
+3、配置IP(重启后需要重新配置)
+ifconfig eth1 192.168.1.200（配置设备的网卡）ipconfig只是暂时设置的命令
+然后控制面板配置本身的网卡为192.168.1.30，使内网相连，需要关闭防火墙
+
+4、上传BSP文件_Ls1043，传到/tmp文件夹下
+	使用WINSCP软件用SFTP传输协议，默认端口22
+
+5、给更新文件设置执行权限
+chmod +x update_1043_flash.sh（里面有升级kernel、BSP、uboot的所有命令，所以用它）
+	然后执行
+./update_1043_flash.sh

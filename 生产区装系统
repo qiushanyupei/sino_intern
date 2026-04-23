@@ -11,7 +11,7 @@ uname -a
 fw_printenv | grep version
 	
 3、配置IP(重启后需要重新配置)
-ifconfig eth1 192.168.1.200（配置设备的网卡）ipconfig只是暂时设置的命令
+ifconfig eth1 192.168.1.200（配置设备的网卡）ifconfig只是暂时设置的命令
 然后控制面板配置本身的网卡为192.168.1.30，使内网相连，需要关闭防火墙
 
 4、上传BSP文件_Ls1043（先从不知道什么地方下载），传到/tmp文件夹下

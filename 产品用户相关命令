@@ -1,5 +1,9 @@
 内部原理：fwd到A端口其实是将数据流放到A端口的发送队列
 隐藏命令：port xxx fwd port xxx
+
+用户命令行状态下show equipment可以查看slot的情况，包括型号、present、mode是global（该情况下可以使用主控板操作对应板卡，否则不能）还是single。
+用户命令行状态下toslot xxx(xxx是槽口号)可以在主控板上ssh连接到对应的槽位
+
 展示风扇，调整风扇转速
 查看电源信息
 查看传感器信息（SW就是指交换机）

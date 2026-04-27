@@ -7,3 +7,5 @@ Packet/Qos内可以新增数据帧中包含的协议头部，可以转换为stac
 Flow Group Setup
 Frame setup中可以调整帧的大小
 Rate setup中可以调整速率大小
+
+IxNetwork抓包里对于port里设置loopback，通过capture，点击Data√control√可以抓包，点击Packets里的数量进行wireshark查看

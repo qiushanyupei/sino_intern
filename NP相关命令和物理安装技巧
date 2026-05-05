@@ -1,4 +1,4 @@
-NP总控机有一台的ip是177，可以通过ssh连接
+NP总控机（小型正交插卡式分流汇聚设备，机架名称为SFC7408）有一台的ip是177，可以通过ssh连接
 进入super账号前可以show equipment可以查看槽口上模组信息
 可以通过sfc.local restart查看信息（例如NP数量、NP的ip）
 通过shell进入super账号然后sudo su进入root账号

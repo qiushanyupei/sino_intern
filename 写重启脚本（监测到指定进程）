@@ -1,0 +1,12 @@
+
+以下是控制开机自起
+3)编辑开机自启常用systemd的service文件
+sudo vim /etc/systemd/system/reboot_process-monitor.service
+4)设置好systemd配置后更新生效步骤：
+sudo systemctl daemon-reload
+sudo systemctl enable reboot_process-monitor.service（将服务设置为开机自启）
+sudo systemctl start reboot_process-monitor.service（立即启动服务）
+5）重启问题1：sudo reboot需要配置无密码也可使用权限
+解决方法：sudo visudo（编辑sudoer文件）；super ALL=(ALL) NOPASSWD: /usr/sbin/reboot（文件末尾添加该行，即super用户在sudo时可以直接reboot，不需要密码）
+6）在需要停止脚本时直接sudo systemctl stop reboot_process-monitor.service;在前台查看脚本状态：sudo systemctl status reboot_process-monitor.service;sudo systemctl disable reboot_process-monitor.service（停止开机自启）
+

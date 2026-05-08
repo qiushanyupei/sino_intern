@@ -1,1 +1,10 @@
+循环语法：
+for...;do
 
+done
+分支语法：
+if...;then
+
+else
+
+fi

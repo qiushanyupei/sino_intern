@@ -1,4 +1,6 @@
 
+3)systemd的service文件中Unit section中After依赖是”或“的关系，是启动顺序；install section中wantedby是依赖关系，即当前服务在wantedby后内容启动时开始启动
+
 以下是控制开机自起
 3)编辑开机自启常用systemd的service文件
 sudo vim /etc/systemd/system/reboot_process-monitor.service

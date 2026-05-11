@@ -1,3 +1,4 @@
 psu: power supply unit(电源)
 ARP：Address Resolution Protocal
 DUT: Device Under Test
+SC:Shelf Controller （机框控制器，即主控卡）

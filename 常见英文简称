@@ -5,3 +5,4 @@ SC:Shelf Controller （机框控制器，即主控卡）
 LOS:loss of signal
 AutoNeg(Auto-Negotiation):自动协商是一种机制，允许两个相连的端口互相通告自己支持的能力，并自动选择双方都支持的最高级工作模式（如速率、双工模式、流控等）
 光模块虽然速率固定，但是可以通过协商实现速率下调兼容低速率光模块
+profile对于硬件来说可以理解为配置

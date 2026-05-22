@@ -1,0 +1,4 @@
+full-duplex	全双工
+fec	（Forward Error Correction） (前向纠错)
+一种编码技术，发送端加入冗余校验码，接收端可自动纠正部分比特错误，无需重传。能降低误码率，但会增加微秒级的延迟。
+uni-tx（单向传输）

@@ -41,7 +41,6 @@ sudo su
 rpm -ivh redis-4.0.14-6.oe2203sp1.aarch64.rpm
 rm -rf /etc/redis.conf
 mv /home/super/redis.conf /etc
-
 systemctl restart redis
 
 6.机框信息烧录与核对

@@ -5,11 +5,6 @@
 改IP使能ping通，需要关闭防火墙。
 打开系统软件，start_server_win.batch。IP选择本机ip，板卡型号选择V5，复制命令执行
 
-systemctl restart sfc.service
-systemctl restart tap_master
-systemctl restart redis
-killall led.d
-
 好了后reboot重启，密码变为super/123456
 
 2.reboot 完成后，安装小软件

@@ -1,0 +1,67 @@
+先用串口线连接主控板（可能碰到还在uboot命令行界面的情况(特征是黄绿色箭头=>)，通过reset可以重启，退出uboot命令行）
+传文件建立通过rz -b或者Winscp
+
+传update，bl2（似乎是uboot版本），加执行权限，执行update文件升级，然后重启系统
+改IP使能ping通，需要关闭防火墙。
+打开系统软件，start_server_win.batch。IP选择本机ip，板卡型号选择V5，复制命令执行
+
+好了后reboot重启，密码变为super/123456
+
+2.reboot 完成后，安装小软件
+sudo su
+cd /app/version
+chmod 777 *
+./dpi_oem_dev_4755-ctc-aarch64.dfo.sh
+
+小软件安装完成后，reboot重启
+
+3.reboot 完成后，安装软件版本
+
+tap_YH_DPI-1.0.26-FULL.tar.gz 上传到app/version 后解压
+
+cd /app/version
+tar -zxvf tap_YH_DPI-1.0.26-FULL.tar.gz
+
+
+cd tap_YH_DPI-1.0.26-FULL
+./install_mini.sh --install
+
+装完了再reboot
+
+5.Redis数据库安装
+
+将redis数据库安装包及redis.conf配置文件放到主控的/home/super目录下
+
+sudo su
+
+rpm -ivh redis-4.0.14-6.oe2203sp1.aarch64.rpm
+rm -rf /etc/redis.conf
+mv /home/super/redis.conf /etc
+
+systemctl restart redis
+
+6.机框信息烧录与核对
+
+手动上传firmware-cmd脚本到/home/super下
+chmod +x /home/super/firmware-cmd
+./firmware-cmd url://eeprom-1
+
+
+搞完firmware后先给自己电脑加IP，100.任意。
+然后开始格式化分区
+ssh进入100.1网关输入一些命令,手动格式化
+
+fdisk /dev/mmcblk0
+n
+p
+1
+然后可以多输几个回车，会自动填入默认值
+w
+mkfs.ext4 /dev/mmcblk0p1
+然后reboot
+通过ssh网络连接会网断，过一段时间再连接即可
+
+xsfc放tmp文件夹，执行然后再reboot
+cd /tmp
+chmod 777 *
+./xsfc-2.2.2_rc37-ctc-embedded-ctcA53.dfo.sh 

@@ -1,2 +1,0 @@
-rate-based可以打满对应端口的速率
-port-based在单端口和rate-based类似，对于多端口会有分流争抢？

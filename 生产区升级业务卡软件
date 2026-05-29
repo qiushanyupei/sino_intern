@@ -27,3 +27,11 @@ netstat -apn |grep 4222 |grep 10.96.70
 cd /app/version
 rpm -ihv tap_tools_yh.rpm --force
 reboot
+
+
+主控每次重启要执行命令
+ifconfig eth1 192.168.1.200/24
+systemctl restart sfc.service
+systemctl restart tap_master
+systemctl restart redis
+killall led.d

@@ -109,5 +109,3 @@ Allocating group tables: done
 Writing inode tables: done                            
 Creating journal (16384 blocks): done
 Writing superblocks and filesystem accounting information: done 
-
-[root@sino-platform:/root]# 

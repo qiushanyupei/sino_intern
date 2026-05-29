@@ -1,9 +1,11 @@
 sudo su
+上传4759软件包到该目录下（/app/version）
 cd /app/version
-上传4759软件包到该目录下
+chmod 777 *
 ./dpi_oem_dev_4759-ctc-aarch64.dfo.sh
 reboot
 sudo su
+安装软件版本
 cd /app/version
 cd tap_YH_DPI-1.0.26-FULL
 ./install_mini.sh --install

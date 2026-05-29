@@ -26,3 +26,4 @@ netstat -apn |grep 4222 |grep 10.96.70
 执行补丁命令
 cd /app/version
 rpm -ihv tap_tools_yh.rpm --force
+reboot

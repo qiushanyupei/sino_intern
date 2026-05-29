@@ -22,3 +22,7 @@ date -s "2026-05-29 16:06:30"
 hwclock -w
 查看进程有无起来（日期和进程都要等一段时间）
 netstat -apn |grep 4222 |grep 10.96.70
+
+执行补丁命令
+cd /app/version
+rpm -ihv tap_tools_yh.rpm --force

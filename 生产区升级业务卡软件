@@ -10,3 +10,9 @@ cd /app/version
 cd tap_YH_DPI-1.0.26-FULL
 ./install_mini.sh --install
 reboot
+
+
+验证扣卡是否能ping通：
+np.local stop
+np.local start
+重启一下再看眼是否能ping通

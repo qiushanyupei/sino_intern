@@ -15,4 +15,4 @@ reboot
 验证扣卡是否能ping通：
 np.local stop
 np.local start
-重启一下再看眼是否能ping通
+重启一下，等一会，再看眼是否能ping通

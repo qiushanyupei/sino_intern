@@ -17,6 +17,8 @@ np.local stop
 np.local start
 重启一下，等一会，再看眼是否能ping通
 
+还要尝试是否能ping通主控卡ip
+
 修改主控日期，预期业务板日期能同步
 date -s "2026-05-29 16:06:30"
 hwclock -w

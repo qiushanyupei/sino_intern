@@ -12,7 +12,7 @@ cd tap_YH_DPI-1.0.26-FULL
 reboot
 
 
-验证扣卡是否能ping通：
+验证扣卡是否能ping通：(软件问题)
 np.local stop
 np.local start
 重启一下，等一会，再看眼是否能ping通

@@ -9,7 +9,7 @@ reset
 配ip,放update，bl2等四个文件到tmp文件夹，cd，给权限，执行，reboot，
 cd /tmp
 chmod 777 *
-./
+./update_1046_flash.sh
 
 再初始化，才能读bsp版本（是软件bug）。
 env default -a
@@ -43,5 +43,15 @@ tar -zxvf tap_YH_DPI-1.0.27-FULL.tar.gz
 cd tap_YH_DPI-1.0.27-FULL
 ./install_mini.sh --install
 
+cpld 版本检查
+hwi-cmd url://cpld-0 r 0x0 4 
+hwi-cmd url://cpld-0 r 0xe 4
+hwi-cmd url://cpld-0 r 0x12 4
+
+第一条命令检查下来就
 装完了再reboot
 然后结束
+
+贴标签“系统OK”
+
+

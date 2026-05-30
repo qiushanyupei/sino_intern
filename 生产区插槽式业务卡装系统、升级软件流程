@@ -48,7 +48,8 @@ hwi-cmd url://cpld-0 r 0x0 4
 hwi-cmd url://cpld-0 r 0xe 4
 hwi-cmd url://cpld-0 r 0x12 4
 
-第一条命令检查下来就
+第一条命令检查下来是2026版本
+后两条命令检查下来都是2025的CPLD版本
 装完了再reboot
 然后结束
 

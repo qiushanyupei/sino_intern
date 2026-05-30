@@ -1,0 +1,47 @@
+改Ip命令：
+sudo su
+ifconfig eth0 192.168.1.200（似乎这边的插入的网口是eth0，所以用eth0）
+
+首先初始化环境变量（初始化环境变量不会刷掉bsp，但是会刷掉系统）
+env default -a
+saveenv
+reset
+配ip,放update，bl2等四个文件到tmp文件夹，cd，给权限，执行，reboot，
+cd /tmp
+chmod 777 *
+./
+
+再初始化，才能读bsp版本（是软件bug）。
+env default -a
+saveenv
+reset
+然后正常装系统。此时密码是生产区密码(装系统装一半自动重启是由于看门狗时间过了，需要重新插拔板卡再装)
+然后配ip要给eth0配
+start_win脚本里面板卡型号是Sfc7960HQ，板卡型号选择11，复制命令执行（还要打开ntp_server）
+
+小软件版本是4759，
+软件版本是1027
+
+好了后reboot重启，密码变为super/123456
+
+2.reboot 完成后，安装小软件
+sudo su
+cd /app/version
+chmod 777 *
+./dpi_oem_dev_4759-ctc-aarch64.dfo.sh
+
+小软件安装完成后，reboot重启
+
+3.reboot 完成后，安装软件版本
+这台设备ip有提供192.168.100.2可以传文件过去，如果再自己配ip反而有问题，连不上
+tap_YH_DPI-1.0.27-FULL.tar.gz 上传到app/version 后解压
+
+cd /app/version
+tar -zxvf tap_YH_DPI-1.0.27-FULL.tar.gz
+
+
+cd tap_YH_DPI-1.0.27-FULL
+./install_mini.sh --install
+
+装完了再reboot
+然后结束

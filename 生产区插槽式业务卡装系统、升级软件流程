@@ -9,7 +9,7 @@ reset
 配ip,放update，bl2等四个文件到tmp文件夹，cd，给权限，执行，reboot，
 cd /tmp
 chmod 777 *
-./update_1046_flash.sh
+./update_1046_flash.sh（此时的操作要尽量快，不然bsp会升断，导致设备重新维修？）
 
 再初始化，才能读bsp版本（是软件bug）。
 env default -a

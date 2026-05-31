@@ -1,0 +1,15 @@
+使用Bypass测试光模块是测试Bypass内部光模块在实际网络中和客户光模块连接时是否兼容
+
+1）通过show alarm history查看历史报错；若端口link down后可以进入super账户check_critical.sh -a，查看重要进程是否起起来，然后cd /app/version/current-version可以查看固件版本
+4）心跳信号在现网中有串接的安全设备提供，测试时由于没有设备通过脚本发送UDP数据模拟心跳
+5）分流设备的转发逻辑是设置端口的smac、dmac、sip、dip为固定值进行转发，对于outgroup多个port都要收到流的情况，建议构造sip,dip等字段不同的数据包，通过匹配规则映射到不同port，否则只能映射到单个port输出流量
+6）Bypass文档中部分命令关键词不必须，group相关命令无需加关键词
+8）Bypass设备保护组level升高排查顺序：heartbeat是否正常->bypass、分流设备上流量统计是否正常，bypass设备在错包率高时会提升保护组；可以通过show logger history查看日志排查错误；show光模块出现丢包可以尝试用光纤清洁器清洁
+9）初始态k2。心跳超时/出现超限错包->进入k1；链路断开->进入k0
+10）通过show groups heartbeats查看保护组心跳超时时间和当前心跳状态
+
+按Bypass的K2模式插光模块，对于多模的光模块，测试时和wan口相连的光模块采用单模的，因为wan口只能接单模光纤（Bypass内部光模块是单模）
+设置好分流设备转发规则
+登录Bypass设备调整Bypass组模式，进行group level调整，和锁定
+设置好仪表上的打流设置
+打流前清仪表、Bypass设备、分流设备的流量

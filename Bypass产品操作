@@ -3,3 +3,15 @@ octet意思是8位字节
 和Bypass连接的分流机是27.139：super/123456（原来的）；现在为27.202（super/Sino@2020）
 27.201上有支持linux设备上发心跳的脚本
 脚本中参数backend_group_id是指心跳发起方的组标识，一般是由和bypass串联的安全设备提供，所以属于后端
+
+show命令可分为展示配置和展示流量光功率两种，展示配置主要分为光模块、保护组首选项（控制模式切换）、接口等
+acl匹配按priority逐个匹配，成功后执行后续动作
+SNMP中的团体可以理解为权限组，分为只读和读写两种，可通过固定字符串登录
+保护模式切换后的stable_wait时间内，会静默监控功能，防止流量波动
+保护组切换逻辑：
+       低->高:心跳超时后自动切换为K1，K2必须设置心跳；wan口丢包率达到threshold；流量降低且降低速率达到threshold；
+                     错包比例达到threshold或错包速率达到threshold；端口linkdown时间到达；闲置时间达到threshold；
+                     threshold_port_unstable_detect_window 时间内检测到port的闪断次数达到port_unstable_threshold（闪断意为短时间内频繁up和down ）
+       高->低:API/CLI切换
+SNMP的四种核心请求：GET、SET、GETNEXT、GETBULK（批量获取OID信息）只能读写变量
+SNMP MIB文件常见定义形式：OBJECT-IDENTITY用于定义OID树的中间节点，不可读写；MODULE-IDENTITY定义模块信息，不可读写；OBJECT-TYPE定义MIB中可读写的具体变量（唯一一种可读写的定义形式）

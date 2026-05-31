@@ -1,0 +1,1 @@
+scp(secure copy protocol)基于ssh，可以在多台主机间传文件（语法：scp file user@host:路径）

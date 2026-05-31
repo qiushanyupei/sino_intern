@@ -3,11 +3,11 @@
 
 以下是配置转发规则：
 
-
-
 内部原理：fwd到A端口其实是将数据流放到A端口的发送队列
 隐藏命令：port xxx fwd port xxx
 删除这类隐藏命令的方式：no port xxx fwd
+
+端口使能配置：port x admin-status disable禁用端口；或可禁用tx或rx（可以同时查看仪表软件端口情况用来快速判断端口连接的仪表口）；其他常用命令：clear running-config
 
 用户命令行状态下show equipment可以查看slot的情况，包括型号、present、mode是global（该情况下可以使用主控板操作对应板卡，否则不能）还是single。
 show sfp是查看寄存器里的取值，未必是真实的光功率

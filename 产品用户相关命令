@@ -9,6 +9,8 @@
 
 端口使能配置：port x admin-status disable禁用端口；或可禁用tx或rx（可以同时查看仪表软件端口情况用来快速判断端口连接的仪表口）；其他常用命令：clear running-config
 
+部分分流设备用户态命令行通过clish -l进入
+
 用户命令行状态下show equipment可以查看slot的情况，包括型号、present、mode是global（该情况下可以使用主控板操作对应板卡，否则不能）还是single。
 show sfp是查看寄存器里的取值，未必是真实的光功率
 用户命令行状态下toslot xxx(xxx是槽口号)可以在主控板上ssh连接到对应的槽位

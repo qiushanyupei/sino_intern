@@ -1,4 +1,11 @@
-装系统
-
-配永久ip
-然后解压，然后升级软件
+配临时ip，要求没有ip冲突，然后配网关，要可以ping通自己电脑的ip
+研发区装系统，在系统确定的情况下需要换特定软件到user-app目录下
+然后启动start_win.bat
+板卡名称写实际
+host(自己厂家就写sino):Sino-Telecom
+安装好后reboot
+然后配永久ip
+cd /app/version
+然后解压
+./packages/update.sh 软件文件名（再升级软件）
+sync(把缓存写入硬盘中)

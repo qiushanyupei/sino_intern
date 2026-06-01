@@ -9,3 +9,4 @@ cd /app/version
 然后解压
 ./packages/update.sh 软件文件名（再升级软件）
 sync(把缓存写入硬盘中)
+最后reboot

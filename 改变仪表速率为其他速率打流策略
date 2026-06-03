@@ -1,2 +1,3 @@
 分流设备内port 0/F/49 breakout 4X25G
 仪表内在上方栏偏右：card configuration改速率
+在仪表内改完速率重新申领port还需要再双击进port改速率

@@ -12,6 +12,7 @@
 部分分流设备用户态命令行通过clish -l进入
 
 用户命令行状态下show equipment可以查看slot的情况，包括型号、present、mode是global（该情况下可以使用主控板操作对应板卡，否则不能）还是single。
+主控卡上show equipment可以显示所有槽位信息，在线卡上只能显示当前槽位信息
 show sfp是查看寄存器里的取值，未必是真实的光功率
 用户命令行状态下toslot xxx(xxx是槽口号)可以在主控板上ssh连接到对应的槽位
 

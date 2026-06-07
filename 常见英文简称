@@ -13,3 +13,4 @@ bsp:board support package(用于让硬件可以被软件驱动，类似于中间
 SFC ：Service Function Chaining（服务功能链），用于编程指定网络流量的服务顺序（如：用户流量 → 防火墙 → 入侵防御系统(IPS) → 负载均衡器 → 目标服务器）
 U-Boot 负责嵌入式设备里的“BIOS + 引导管理器
 AverageLen(Tx/Rx)：报文的平均长度
+mtu表示Maximum Transmission Unit（最大传输单元），通常以字节为单位

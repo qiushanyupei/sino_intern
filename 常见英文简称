@@ -14,3 +14,4 @@ SFC ：Service Function Chaining（服务功能链），用于编程指定网络
 U-Boot 负责嵌入式设备里的“BIOS + 引导管理器
 AverageLen(Tx/Rx)：报文的平均长度
 mtu表示Maximum Transmission Unit（最大传输单元），通常以字节为单位
+PPS(packet per second)：包长越长，PPS越低

@@ -1,0 +1,1 @@
+SELinux：Security-Enhanced Linux（安全增强型 Linux）， Linux 内核中的一个强制访问控制（MAC，Mandatory Access Control）安全模块。用于避免root账号被攻击情况，限制了root账号权限。

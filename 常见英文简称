@@ -15,3 +15,4 @@ U-Boot 负责嵌入式设备里的“BIOS + 引导管理器
 AverageLen(Tx/Rx)：报文的平均长度
 mtu表示Maximum Transmission Unit（最大传输单元），通常以字节为单位
 PPS(packet per second)：包长越长，PPS越低
+Qos（quality of service）控制数据包的优先级

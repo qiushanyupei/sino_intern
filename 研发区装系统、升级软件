@@ -7,7 +7,7 @@ route add default gw 192.168.27.1
 host(自己厂家就写sino):Sino-Telecom
 安装好后reboot
 cd /app/version
-然后解压tar -zxvf 对应文件名
+然后解压tar -zxvf 对应文件名(似乎可以不解压)
 ./packages/update.sh 软件文件名（再升级软件）
 sync(把缓存写入硬盘中)
 最后reboot

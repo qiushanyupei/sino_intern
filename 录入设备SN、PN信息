@@ -4,7 +4,7 @@
 进入shell命令行
 firmware-cmd url://eeprom-0 init(不初始化会出现段错误)
 firmware-cmd url://eeprom-0可以查看可以选的参数
-firmware-cmd url://eeprom-0 可选参数 后续pn、sn号
+firmware-cmd url://eeprom-0 可选参数 后续pn、sn号,pn是part-number，即为部件号
 
 cpu信息录入
 show system info

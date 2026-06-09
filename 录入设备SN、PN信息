@@ -1,4 +1,11 @@
+会有主板和cpu的标签，一般录入主板的sn和pn，通过查看壳子里面标签贴的位置确定哪一个是主板的标签
+
+主板信息录入
 进入shell命令行
 firmware-cmd url://eeprom-0 init
 firmware-cmd url://eeprom-0可以查看可以选的参数
 firmware-cmd url://eeprom-0 可选参数 后续pn、sn号
+
+cpu信息录入
+show system info
+oem set local 可选参数具体值

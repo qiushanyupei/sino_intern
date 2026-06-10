@@ -3,3 +3,5 @@
 PostgreSQL数据库默认密码是postgres
 
 spirent基本使用：点击chassis->选择第一个->输入仪表ip（27.11）->选择port（速率要对应）->点击Traffic  Generator->Add Raw->长度选择Random（ip、mac自带的）->load per stream block，速率调到100%->apply->use classic result->点击上方工具栏Traffic图标发包
+
+仪表通过长按开关

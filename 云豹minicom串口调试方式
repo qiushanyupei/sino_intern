@@ -1,0 +1,16 @@
+sdjm800_minicom.sh
+
+登录账密:root/123456
+使用方法:/app/esfc/sfc7968hp/sdjm800_minicom.sh [subslot:1-4] [dpu:0,1] [com:0-2]
+subslot就是板卡上的底座，实际上是对应每个扣卡；dpu对应每个芯片(Data Processing Unit)，com则是对应串口号，对于106扣卡只有一个对接的串口号，即为0
+
+然后reboot可以看到DMC0/1,DMC2/3,DMC4/5分别对应6块实际内存条，其中一个内存条出问题相关命令在重启时就不会出现，就是有问题
+前面有两个报错，不用管
+ERROR: Error -20 getting TIM file information
+Load: NULL: File doesn't exist
+DMC0/1: 16 GB/ch, 2Rx8, SODIMM, 32-bit data, non-ECC
+表示一个 16GB 容量的 SODIMM 内存条。它使用 2Rx8 的组织结构，数据位宽 32-bit，并且 不带 ECC 纠错功能
+SODIMM ：Small Outline Dual In-line Memory Module(（小外形双列直插式内存模块）常用小尺寸内存模块)
+2R×8表示2组内存颗粒，每一个内存颗粒的数据接口宽度是8位。每个Rank颗粒数为8
+ECC:error correcting code，用于修复但比特数据错误
+minicom退出方法:按完ctrl+a，然后按x

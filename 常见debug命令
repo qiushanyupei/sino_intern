@@ -1,2 +1,0 @@
-sudo tail -f /app/var/log/debug.log 查看debug日志
-

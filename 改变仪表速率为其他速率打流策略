@@ -1,4 +1,4 @@
 分流设备内port 0/F/49 breakout 4X25G
-仪表内在上方栏偏右：card configuration改速率
+Network仪表内在上方栏偏右：card configuration改速率
 在仪表内改完速率重新申领port还需要再双击进port改速率
 直接调整速率百分比最后获得的发包速率是平均速率，瞬发速率可能超过端口速率，可能会烧掉

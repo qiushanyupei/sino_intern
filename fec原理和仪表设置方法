@@ -1,3 +1,5 @@
 允许发送端发送冗余数据包，这样即使丢包也可以根据冗余数据包重新计算回来
 
 fc和rs只是两种不同的冗余码(用于前向纠错)类型
+
+对于IxNetwork设置，对于端口右键edit L1 property，取消use IEEE Media deaults for 100GBASE LR4

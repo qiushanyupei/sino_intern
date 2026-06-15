@@ -2,4 +2,4 @@
 
 fc和rs只是两种不同的冗余码(用于前向纠错)类型
 
-对于IxNetwork设置，对于端口右键edit L1 property，取消use IEEE Media deaults for 100GBASE LR4
+对于IxNetwork设置，对于端口右键edit L1 property，取消use IEEE Media deaults for 100GBASE LR4，选择rs-fec

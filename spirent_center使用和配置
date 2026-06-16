@@ -8,3 +8,5 @@ spirent基本使用：点击chassis->选择第一个->输入仪表ip（27.11）-
 
 设置跳变
 创建包时上方栏进入Frame->ipv4->ipv4 Header->sip或者dip->右键insert ipv4 modifier->count表示跳变多少次,repeat>1就表示循环,value表示初始值
+
+清除统计(黄色回环箭头)

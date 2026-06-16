@@ -7,6 +7,8 @@
 隐藏命令：port xxx fwd port xxx
 删除这类隐藏命令的方式：no port xxx fwd
 
+可以直接查看输入组或输出组的流量,如show outgroup 2 statistics
+
 端口使能配置：port x admin-status disable禁用端口；或可禁用tx或rx（可以同时查看仪表软件端口情况用来快速判断端口连接的仪表口）；其他常用命令：clear running-config
 
 部分分流设备用户态命令行通过clish -l进入

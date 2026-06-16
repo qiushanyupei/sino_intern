@@ -11,3 +11,9 @@ cd /app/version
 ./packages/update.sh 软件文件名（再升级软件）
 sync(把缓存写入硬盘中)
 最后reboot
+
+
+或者升级系统的统一脚本
+xxx.sh 1-3
+xxx.sh 23
+xxx.sh all(即在主控上给其他槽道升级，但是需要对业务卡重启(复位解复位))

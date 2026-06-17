@@ -4,3 +4,8 @@ show sensor查看温度
 check_critical.sh -a查看软件相关进程是否起来
 lscpu查看cpu信息
 cat /etc/os-release查看操作系统信息
+
+碰到问题分情况打流
+fec
+光模块损耗光信号
+走线(如上下层或中间、前面、后面光模块)

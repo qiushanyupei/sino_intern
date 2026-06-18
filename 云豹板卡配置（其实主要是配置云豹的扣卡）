@@ -7,7 +7,7 @@ cd /usr/bin
 ./jmtool jm_firmware_update \"/root/imu_version_pkg0910.bin\" 4 1
 ./jmtool jm_firmware_update \"/root/imu_version_pkg0910.bin\" 4 2
 5.1修改核隔离，根据具体的颗数和核数来改
-vim /etc/default/grub
+vim /etc/default/grub(前面的核用来跑系统，其他核用来跑其他业务)
 5.2生成配置文件（唯一）
 grub2-mkconfig -o  /boot/efi/EFI/anolis/grub.cfg
 6.修改队列(根据具体的颗数和核数来)

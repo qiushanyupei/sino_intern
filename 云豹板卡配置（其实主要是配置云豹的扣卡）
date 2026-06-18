@@ -1,0 +1,35 @@
+1.将bin文件拉到板卡中
+2.将文件从板卡拉入云豹中的两个cpu，root用户下传
+scp imu_version_pkg0910.bin root@10.96.70.1:~/
+3.进入云豹ssh 10.90.70.x
+4.开始升级dpu，是唯一的命令
+cd /usr/bin
+./jmtool jm_firmware_update \"/root/imu_version_pkg0910.bin\" 4 1
+./jmtool jm_firmware_update \"/root/imu_version_pkg0910.bin\" 4 2
+5.1修改核隔离，根据具体的颗数和核数来改
+vim /etc/default/grub
+5.2生成配置文件（唯一）
+grub2-mkconfig -o  /boot/efi/EFI/anolis/grub.cfg
+6.修改队列(根据具体的颗数和核数来)
+/usr/share/jmnd/tools/jmtool jm_send_cmd_to_imu0 \"pccu_ovs_pf_info_set 15 packed 1024 35\" 
+7.操作这个云豹扣卡的另一个dpu芯片
+重复上面的步骤
+8.重启云豹扣卡,云豹扣卡的4个位置为0(对应ip为1，5)、1、2、3
+在root权限下， sdjm800d.local stop 1
+ sdjm800d.local start 1
+9.重启后进入云豹扣卡查看dpu升级是否成功
+ dmidecode -t 11
+10ssh连接dpu，对该扣卡的每一个dpu修改模式，根据实际情况选择mac mode
+cd /usr/bin
+./jmtool jm_send_cmd_to_imu0 \"mac rsm nvm_mode_ctrl 1\"
+./jmtool jm_send_cmd_to_imu0 \"mac rsm port_map_set 1\"
+12.重启云豹扣卡，在root权限下，云豹扣卡的4个位置为0(对应ip为1，5)、1、2、3
+sdjm800d.local stop 1
+sdjm800d.local start 1
+13.登录云豹的两个cpu
+ssh 10.90.76.x
+14查看模式是否修改成功
+cd /usr/bin
+./jmtool jm_send_cmd_to_imu0 \"mac rsm status\"
+15 然后继续配其他扣卡，重复以上步骤
+15 所有扣卡都配置好后，进对应槽位看内部口起没起来，以及show equipment

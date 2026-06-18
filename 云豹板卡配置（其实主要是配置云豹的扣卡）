@@ -2,7 +2,7 @@
 2.将文件从板卡拉入云豹中的两个cpu，root用户下传
 scp imu_version_pkg0910.bin root@10.96.70.1:~/
 3.进入云豹ssh 10.90.70.x
-4.开始升级dpu，是唯一的命令
+4.开始升级dpu中的imu，是唯一的命令
 cd /usr/bin
 ./jmtool jm_firmware_update \"/root/imu_version_pkg0910.bin\" 4 1
 ./jmtool jm_firmware_update \"/root/imu_version_pkg0910.bin\" 4 2

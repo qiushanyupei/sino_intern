@@ -1,3 +1,4 @@
 scp(secure copy protocol)基于ssh，可以在多台主机间传文件（语法：scp file user@host:路径）
 scp super@192.168.27.201:/home/super/bp_udp_tool_x86 /tmp（含义：从201传输指定路径下文件到本机指定目录下）
+scp imu_version_pkg0910.bin root@192.168.27.202:/home/super(或从本机传文件到其他地方)谁给了用户名和ip，谁就是外部机器，既可以是源也可以是目的
 rz（receive ZModem）是基于ZModem 协议的文件上传命令；-b参数:binary

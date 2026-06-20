@@ -1,5 +1,5 @@
 1.将bin文件拉到板卡中
-2.将文件从板卡拉入云豹中的两个cpu，root用户下传
+2.将文件从板卡拉入某一扣卡中的两个dpu芯片，root用户下传
 scp imu_version_pkg0910.bin root@10.96.70.1:~/
 3.进入云豹ssh 10.90.70.x(扣卡的账密分别是root/root)
 4.开始升级dpu中的imu，是唯一的命令
@@ -9,7 +9,7 @@ cd /usr/bin
 5.1修改核隔离，根据具体的颗数和核数来改
 vim /etc/default/grub(前面的核用来跑系统，其他核用来跑其他业务)
 5.2生成配置文件（唯一）
-grub2-mkconfig -o  /boot/efi/EFI/anolis/grub.cfg
+grub2-mkconfig -o  /boot/efi/EFI/anolis/grub.cfg (-o表示output直接输出到对应文件目录下)
 6.修改队列(根据具体的颗数和核数来)
 /usr/share/jmnd/tools/jmtool jm_send_cmd_to_imu0 \"pccu_ovs_pf_info_set 15 packed 1024 35\" 
 7.操作这个云豹扣卡的另一个dpu芯片
@@ -18,7 +18,8 @@ grub2-mkconfig -o  /boot/efi/EFI/anolis/grub.cfg
 在root权限下， sdjm800d.local stop 1
  sdjm800d.local start 1
 9.重启后进入云豹扣卡查看dpu升级是否成功
- dmidecode -t 11
+ dmidecode -t 11 
+10.通过cat /proc/cmdline可以查看核隔离配置文件是否修改成功
 10ssh连接dpu，对该扣卡的每一个dpu修改模式，根据实际情况选择mac mode
 cd /usr/bin
 ./jmtool jm_send_cmd_to_imu0 \"mac rsm nvm_mode_ctrl 1\"

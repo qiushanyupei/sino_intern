@@ -12,3 +12,19 @@ spirent基本使用：点击chassis->选择第一个->输入仪表ip（27.11）-
 清除统计(黄色回环箭头)
 
 一共明面上只有5个口，前两个是1、2；倒数第三个和最后一个是49、50
+对于100G速率要设置成NRZ模式
+
+1、STC-Default Mode
+功能：出厂预设通用均衡配置，适配绝大多数常规光模块 / 直连铜缆、标准传输链路；均衡强度、Tx 电压、CTLE/DFE 参数折中，兼容性最好，常规测试首选默认模式。
+2、STC-L1 Mode
+全称：Spirent TestCenter L1 Long Reach Mode（L1 长距离模式，L1=Layer1 物理层长距）
+功能：SerDes 收发器开启长距离信号补偿，增大发送预加重 / 均衡增益，补偿线缆、背板、长光纤带来的高频损耗、码间干扰 ISI；接收端均衡强度拉满，提升信号接收灵敏度。
+适用：机框背板长走线、几十米高速铜缆、长距离单模光纤、链路衰减偏大容易丢包 / 链路起不来的场景。
+3、STC-NRZ Mode
+全称：Spirent TestCenter Non-Return-to-Zero Mode（不归零码专用模式）
+NRZ 英文全称：Non-Return-to-Zero
+功能：强制 SerDes 工作在NRZ 两电平调制架构，关闭 PAM4 四电平相关适配逻辑，均衡参数针对 NRZ 码型优化。
+4、STC-ECM-Scaling Mode
+全称：Spirent TestCenter Equalization Control Mode Scaling（均衡控制自适应缩放模式，ECM=Equalization Control Mode）
+功能：自适应动态均衡模式，收发器自动侦测链路损耗，实时缩放调整预加重、CTLE、DFE 抽头系数；链路速率变化、线缆插拔、损耗波动时自动匹配最优均衡参数。
+适用：多变测试环境、兼容性摸底测试、需要频繁更换线缆 / 模块、高低速率混用、自动化测试场景；功耗略高于 Default 模式。

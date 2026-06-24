@@ -18,3 +18,4 @@ PPS(packet per second)：包长越长，PPS越低
 Qos（quality of service）控制数据包的优先级
 MA网络————城域网（Metropolitan Area Network，MAN）
 SerDes:Serializer / Deserializer(串行器和解串器)
+STC (spirent test center)

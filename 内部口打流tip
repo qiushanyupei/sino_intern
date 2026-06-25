@@ -1,2 +1,49 @@
 通常要设置跳变，因为内部口和扣卡芯片交互，芯片是多核的，是多核一起运作才能达到某一速率，单核运作达不到指定速率，如果不设置跳变只有单一sip,dip,只会交给其中一个核工作，所以超过处理极限的就会丢掉，因此设置跳变可以分给多核工作，才不会丢包
 发货测试不需要测试极限速率，只需要保证没有误码就行，不需要看极限速率
+
+新版本软件打内部口常见规则：面板口转发到内部口要加vlan-add port-tag；内部口转发面板口需要写高级规则(advanced-acl)
+ingroup 1 port 4/F/1
+ingroup 2 port 4/F/2
+ingroup 3 port 4/F/3
+ingroup 4 port 4/F/4
+ingroup 5 port 4/F/5
+ingroup 6 port 4/F/6
+ingroup 7 port 4/F/7
+ingroup 8 port 4/F/8
+
+advanced-acl action-set 1 fwd port 4/F/2
+advanced-acl action-set 2 fwd port 4/F/3
+advanced-acl action-set 3 fwd port 4/F/4
+advanced-acl action-set 4 fwd port 4/F/5
+advanced-acl action-set 5 fwd port 4/F/6
+advanced-acl action-set 6 fwd port 4/F/7
+advanced-acl action-set 7 fwd port 4/F/8
+advanced-acl action-set 8 fwd port 4/F/1
+
+acl action-set 1  fwd port 4/I/1 vlan-add port-tag
+acl action-set 2  fwd port 4/I/2 vlan-add port-tag
+acl action-set 3  fwd port 4/I/3 vlan-add port-tag
+acl action-set 4  fwd port 4/I/4 vlan-add port-tag
+acl action-set 5  fwd port 4/I/5 vlan-add port-tag
+acl action-set 6  fwd port 4/I/6 vlan-add port-tag
+acl action-set 7  fwd port 4/I/7 vlan-add port-tag
+acl action-set 8  fwd port 4/I/8 vlan-add port-tag
+
+acl rule 1  action-set 1  ingroup 1
+acl rule 2  action-set 2  ingroup 2
+acl rule 3  action-set 3  ingroup 3
+acl rule 4  action-set 4  ingroup 4
+acl rule 5  action-set 5  ingroup 5
+acl rule 6  action-set 6  ingroup 6
+acl rule 7  action-set 7  ingroup 7
+acl rule 8  action-set 8  ingroup 8
+
+advanced-acl rule 1  action-set 1 ingroup 1
+advanced-acl rule 2  action-set 2 ingroup 2
+advanced-acl rule 3  action-set 3 ingroup 3
+advanced-acl rule 4  action-set 4 ingroup 4
+advanced-acl rule 5  action-set 5 ingroup 5
+advanced-acl rule 6  action-set 6 ingroup 6
+advanced-acl rule 7  action-set 7 ingroup 7
+advanced-acl rule 8  action-set 8 ingroup 8
+advanced-acl rule commit

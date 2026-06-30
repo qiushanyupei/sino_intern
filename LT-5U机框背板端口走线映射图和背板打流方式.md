@@ -5,32 +5,3 @@
 有可能port fwd命令无法在背板口间转发流量，可以用acl规则配制<br>
 背板流量限制200G<br>
 <br>
-<br>
-port 1/F/20 fwd port 1/B/1<br>
-port 1/B/2 fwd port 1/B/3<br>
-port 1/B/4 fwd port 1/B/5<br>
-port 1/B/6 fwd port 1/B/7<br>
-port 1/B/8 fwd port 2/B/1<br>
-port 1/B/7 fwd port 1/B/6<br>
-port 1/B/5 fwd port 1/B/4<br>
-port 1/B/3 fwd port 1/B/2<br>
-port 1/B/1 fwd port 1/F/20<br>
-<br>
-port 2/B/3 fwd port 2/B/4<br>
-port 2/B/7 fwd port 2/B/8<br>
-port 2/B/2 fwd port 2/B/5<br>
-port 2/B/6 fwd port 2/B/6<br>
-port 2/B/5 fwd port 2/B/2<br>
-port 2/B/1 fwd port 1/B/8<br>
-port 2/B/8 fwd port 2/B/7<br>
-port 2/B/4 fwd port 2/B/3<br>
-<br>
-port 3/B/3 fwd port 3/B/4<br>
-port 3/B/7 fwd port 3/B/8<br>
-port 3/B/1 fwd port 3/B/2<br>
-port 3/B/5 fwd port 3/B/6<br>
-port 3/B/6 fwd port 3/B/5<br>
-port 3/B/2 fwd port 3/B/1 <br>
-port 3/B/8 fwd port 3/B/7<br>
-port 3/B/4 fwd port 3/B/3<br>
-<br>

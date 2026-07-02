@@ -1,3 +1,5 @@
+机框后面有PMM卡可以插拔（疑似power management module）用于管理电源、读取电源信息，show psu读不出来可以查看
+
 CPLD = Complex Programmable Logic Device（复杂可编程逻辑器件）特点：上电即可工作（无需加载程序）；时序稳定、确定性强；适合做控制逻辑；FPGA相对来说更复杂，负责处理数据和算法
 CPLD负责：1、按顺序打开电源；2、检测电源是否正常；3、异常时拉复位；4、监控状态（监控风扇、电源、温度、控制告警灯（LED））
 在光模块中：1、控制 TX enable / disable；2、读取 LOS（loss of signal） / fault 状态；3、管理 I²C（Inter-Integrated Circuit，内部集成电路总线）（DDM（Digital Diagnostic Monitoring）信息）；4、做简单保护逻辑

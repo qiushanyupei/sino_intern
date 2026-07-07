@@ -13,6 +13,8 @@ cd /app/version
 sync(把缓存写入硬盘中)
 最后reboot
 
+单独更新的脚本对应update.sh
+整框更新的脚本对应update_all.sh
 
 或者升级系统的统一脚本
 xxx.sh 1-3

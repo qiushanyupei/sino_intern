@@ -1,7 +1,7 @@
 1.将bin文件拉到板卡中
 2.将文件从板卡拉入某一扣卡中的两个dpu芯片，root用户下传
 scp imu_version_pkg0910.bin root@10.96.70.1:~/
-3.进入云豹ssh 10.90.70.x(扣卡的账密分别是root/root)
+3.进入云豹ssh 10.96.70.x(扣卡的账密分别是root/root)
 4.开始升级dpu中的imu，是唯一的命令
 cd /usr/bin
 ./jmtool jm_firmware_update \"/root/imu_version_pkg0910.bin\" 4 1

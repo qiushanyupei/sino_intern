@@ -1,0 +1,9 @@
+port 2/B/1-8.0 type FP
+
+ingroup 1  port 2/F/13.0,2/F/24.0
+
+copygroup 1 port 2/B/1-8.0
+
+acl action-set 1  copy copygroup 1
+
+acl rule 1  action-set 1  ingroup 1 

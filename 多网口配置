@@ -1,0 +1,7 @@
+首先mgmt multi enable
+然后mgmt multi enable 0-4
+0对应ethx, 1对应mgmt1，2对应mgmt2 ，3对应mgmt3，4对应mgmt4
+  mgmt multi set 1 ip 192.168.27.123/24 via 192.168.27.1
+  set 后面的id是对应多网口的0-4 5个网口
+  via 后面跟的是网关
+  0就是单网口的时候用的那个网口

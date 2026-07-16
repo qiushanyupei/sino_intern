@@ -1,0 +1,8 @@
+在root的根目录下，sudo su后直接cd可以转到根目录下
+有clx_ffe.sh是运行时保持ffe参数的脚本
+sfc7290h_clx_ffe.conf是实际参数
+
+./clx_ffe.sh show sfc7290h_clx_ffe.conf 可以看实际参数
+cat sfc7290h_clx_ffe.conf可以看预期参数，例如：(0 1 -5 47 -10 0 0)
+一般中间一个（47），或中间三个（-5，47，-10）预期参数和实际参数一致
+./clx_ffe.sh set sfc7290h_clx_ffe.conf 是设置参数

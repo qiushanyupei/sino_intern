@@ -1,3 +1,5 @@
+从默认系统返回安装的openeuler系统：/app/opt/rootfs/fstool.sh setenv
+
 配临时ip，要求没有ip冲突，然后配网关，要可以ping通自己电脑的ip
 ifconfig eth2 192.168.27.206（对于7948HQ来说eth2是对外网口）
 route add default gw 192.168.27.1

@@ -21,3 +21,4 @@ SerDes:Serializer / Deserializer(串行器和解串器)
 STC (spirent test center)
 octet意思是8位字节
 Inc Byte : 单位时间内流经某端口/某条流的字节数增量（用于实时带宽计算或流量突发检测）
+PCBA：Printed Circuit Board Assembly（安装好的PCB板料号）

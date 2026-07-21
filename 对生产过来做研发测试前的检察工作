@@ -1,0 +1,2 @@
+1、检查系统、cpld、软件、cpu是否和配料表/要求相同
+  软件还要细看/app/version,ls -l /app

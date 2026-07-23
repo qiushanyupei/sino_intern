@@ -2,3 +2,4 @@
 ps -ef查看全部进程
 kill -9 
 pgrep -l（会展示PID和进程名），是直接搜索进程
+~/表示家目录，super的家目录就是绝对路径的/home/super

@@ -1,0 +1,5 @@
+sad是提供snmp服务的
+httpd是提供http接口的
+因为业务卡没有网线，不直接提供这类型的服务，所以就不启动
+scd（system Configuration Daemon）（用于配置下发）启动会注册port给sw，应该是你只重启了scd，没有重启sw，所以scd的端口注册失败，所以scd就没有现实端口，我整体重启了一下
+swapp (switch application):用于管理交换

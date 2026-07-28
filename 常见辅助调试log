@@ -1,0 +1,3 @@
+tail -f -n 400 /app/var/log/startup.log（startup.log主要用来查看启动日志，用来调试重启）
+-n表示数量，-f表示如果有新内容输入到log文件中，立即打印到终端上
+/app/var/log/debug.log

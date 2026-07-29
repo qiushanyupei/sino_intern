@@ -22,8 +22,8 @@ grub2-mkconfig -o  /boot/efi/EFI/anolis/grub.cfg (-o表示output直接输出到�
  sdjm800d.local start 1
 9.重启后进入云豹扣卡查看dpu升级是否成功
  dmidecode -t 11 
-10.通过cat /proc/cmdline可以查看核隔离配置文件是否修改成功,查看队列配置
-10.通过 /usr/share/jmnd/tools/jmtool jm_send_cmd_to_imu0 \"pccu_ovs_pf_initialized_info_show\"
+10.通过cat /proc/cmdline可以查看核隔离配置文件是否修改成功
+10.通过 /usr/share/jmnd/tools/jmtool jm_send_cmd_to_imu0 \"pccu_ovs_pf_initialized_info_show\",查看队列配置
 10ssh连接dpu，对该扣卡的每一个dpu修改模式，根据实际情况选择mac mode
 cd /usr/bin
 ./jmtool jm_send_cmd_to_imu0 \"mac rsm nvm_mode_ctrl 1\"

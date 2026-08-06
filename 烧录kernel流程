@@ -1,0 +1,4 @@
+/proc/mtd 不是真实磁盘目录，是内核 procfs 虚拟文件，由 Linux MTD 子系统动态生成，只在使用 MTD（Memory Technology Device）Flash 的系统存在（NOR Flash / NAND Flash）。
+先擦除再烧录
+首先确定哪个mtd分区可以烧录Kernel，再烧录
+例如：flashcp -v kernel_ls1043a_5.10.35-20231201.120810 /dev/mtd4

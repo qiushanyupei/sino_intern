@@ -1,0 +1,4 @@
+[root@localhost super]# hwi-cmd cpld-0 r 0x0
+0x26060520
+[root@localhost super]# hwi-cmd cpld-0 r 0x4
+0x00000221

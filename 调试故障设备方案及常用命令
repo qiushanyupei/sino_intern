@@ -6,6 +6,8 @@
 或配料表其他版本
 系统版本：
 
+芯片型号：lscpu中的Model name
+
 CPU扣卡：Phytium-e2000 
 
 uboot版本：uboot_uboot_sce2000q_t7-20260415.150057

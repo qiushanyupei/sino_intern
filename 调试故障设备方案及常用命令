@@ -1,0 +1,27 @@
+对于故障设备和正常设备，比较到底是什么版本不同，定位问题
+SFC7132CL 新版 CTC8292 交换
+
+
+CPU扣卡：Phytium-e2000 
+
+uboot版本：uboot_uboot_sce2000q_t7-20260415.150057
+
+kernel版本：kernel_phytium_e2000q_5.10.153-20260515.101453
+
+FPGA版本：
+[root@localhost super]# hwi-cmd cpld-0 r 0x0
+0x26060520
+[root@localhost super]# hwi-cmd cpld-0 r 0x4
+0x00000221
+
+CPLD版本：
+[root@localhost super]# hwi-cmd cpld-1 r 0x0
+0x0921
+[root@localhost super]# hwi-cmd cpld-1 r 0x1
+0x2606
+[root@localhost super]# hwi-cmd cpld-1 r 0x4
+0x0220
+
+软件版本：xsfc-2.2.3_rc13-c-aarch64.tar.gz
+
+奥拉时钟：EeprommCRCFile_SFC7132CL_CTC8292_AU5061_20260728.bin

@@ -25,3 +25,4 @@ PCBA：Printed Circuit Board Assembly（安装好的PCB板料号）
 rma:Return Material Authorization(可以理解为退货处理)
 EEPROM全称：Electrically Erasable Programmable Read-Only Memory（也属于寄存器那块）
 MCP = Model Context Protocol（模型上下文协议),是外部工具统一接口，通常用json写，具体代码在MCP服务器上
+netif（network interface）（似乎是Linux内置 网卡流量统计器）

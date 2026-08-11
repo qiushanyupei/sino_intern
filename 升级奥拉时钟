@@ -1,0 +1,4 @@
+eeprom-tools -m hwi -a 0x50 -u url://i2c-49 -f ./EeprommCRCFile_SFC7132CL_CTC8292_AU5061_20260728.bin -o ./update.bin
+-m指模式，-a指address,-u指总线url，-f指输入的时钟固件文件文件，-o指输出的文件
+执行成功后要检查输入和输出文件的md5是否相同
+md5sum ./*.bin

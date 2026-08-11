@@ -1,0 +1,6 @@
+升级完uboot需要reboot
+然后需要恢复一下默认环境变量 
+env default -a
+saveenv
+将重置后的默认值写入 Flash，否则更新的默认值没有被配置
+然后输入reset重新启动

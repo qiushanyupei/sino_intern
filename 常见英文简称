@@ -28,3 +28,4 @@ MCP = Model Context Protocol（模型上下文协议),是外部工具统一接�
 netif（network interface）（似乎是Linux内置 网卡流量统计器）
 TSU（芯片内置温度模块）Thermal Sensor Unit   热传感器单元
 hwi（hardware image）将硬件扇区已镜像的方式操作
+PHY(physical Layer Transceiver),可以理解为物理层的收发器

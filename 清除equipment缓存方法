@@ -1,2 +1,4 @@
 no equipment 数字 card
 要主控上和对应槽位都没有配置才能清除equipment缓存
+命令行分两种权限，super和root，配置可能不同，取决于配置人进的什么权限的命令行
+在root权限下通过clish -l可以进入root权限命令行

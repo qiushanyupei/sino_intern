@@ -1,0 +1,7 @@
+nmcli connection modify eth3 \
+ipv4.method manual \
+ipv4.addresses 192.168.10.100/24 \
+ipv4.gateway 192.168.10.1 \
+ipv4.dns "223.5.5.5,114.114.114.114" \
+802-3-ethernet.mac-address 00:11:22:33:44:55 \
+connection.autoconnect yes

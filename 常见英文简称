@@ -32,3 +32,4 @@ PHY(physical Layer Transceiver),可以理解为物理层的收发器
 PCN（Product Change Notification）产品变更通知
 BGA（Ball Grid Array）球栅阵列封装。引脚不是两侧排布，而是芯片底部以矩阵形式排布锡球（焊球）；DDR、FLASH、主控芯片背面大量采用该封装；日常说的植球（Reball），就是重新制作 BGA 底部锡球。
 pcs-pieces，也就是指“片”
+ SAI（Switch Abstraction Interface，交换机抽象接口）

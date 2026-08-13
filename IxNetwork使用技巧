@@ -11,3 +11,5 @@ IxNetwork抓包里对于port里设置loopback，通过capture，点击Data√con
 select views可以选择port statistics，显示端口统计信息
 
 设置Network ip跳变，进入包设置中的Stack Diagram,点击sip,dip进行设置
+
+点击右下角logs可以查看相关log

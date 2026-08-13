@@ -1,3 +1,4 @@
+对于主控卡
 首先mgmt multi enable
 然后mgmt multi enable 0-4
 0对应ethx, 1对应mgmt1，2对应mgmt2 ，3对应mgmt3，4对应mgmt4

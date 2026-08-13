@@ -1,0 +1,3 @@
+进入芯片sdk命令行：clx_shell_aarch64(云合的交换芯片)
+查看芯片型号：diag show info chip
+查看芯片温度：swc show temperature

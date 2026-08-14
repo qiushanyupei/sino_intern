@@ -1,0 +1,4 @@
+ctcshell
+
+查看底层端口是否up命令
+show port mac-link

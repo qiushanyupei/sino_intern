@@ -1,0 +1,5 @@
+存储路径：/home/super/esfc/
+用途：每次重启后自动载入，作为初始running-config
+可以通过改名，使配置不再恢复
+通过mv命令
+mv local.config local1.config

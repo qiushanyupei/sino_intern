@@ -16,7 +16,7 @@ vim /etc/default/grub(前面的核用来跑系统，其他核用来跑其他业�
 5.2生成配置文件（唯一）
 grub2-mkconfig -o  /boot/efi/EFI/anolis/grub.cfg (-o表示output直接输出到对应文件目录下)
 6.修改队列(根据具体的颗数和核数来)
-/usr/share/jmnd/tools/jmtool jm_send_cmd_to_imu0 \"pccu_ovs_pf_info_set 15 packed 1024 31\" 
+/usr/share/jmnd/tools/jmtool jm_send_cmd_to_imu0 \"pccu_ovs_pf_info_set 15 packed 1024 35\" 
 
 7.操作这个云豹扣卡的另一个dpu芯片
 重复上面的步骤

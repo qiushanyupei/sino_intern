@@ -34,3 +34,4 @@ BGA（Ball Grid Array）球栅阵列封装。引脚不是两侧排布，而是�
 pcs-pieces，也就是指“片”
 SAI（Switch Abstraction Interface，交换机抽象接口）
 Network Packet Broker（NPB）：流量分发器，好像可以负责流量去重
+revision：通常指修订版本

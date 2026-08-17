@@ -2,3 +2,4 @@
 先擦除再烧录
 首先确定哪个mtd分区可以烧录Kernel，再烧录
 例如：flashcp -v kernel_ls1043a_5.10.35-20231201.120810 /dev/mtd4
+-v | --verbose   Show progress reports

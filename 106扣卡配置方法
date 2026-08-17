@@ -1,0 +1,8 @@
+设置软连接的路径在/var/lib/tftpboot
+cn96是老版的106，cn106是新版
+参考其他l06设备的软连接设置，把需要的相关文件传过去，然后设置名字无误的软连接
+ln -sf
+link后面加参数
+ -f, --force                 remove existing destination files
+  -s, --symbolic              make symbolic links instead of hard links
+因为一开始没有系统，所以需要串口登录进去reset导入系统

@@ -1,0 +1,6 @@
+netstat -nap | grep "9600"
+ -n, --numeric            don't resolve names
+  -a, --all                display all sockets (default: connected)
+-p, --programs           display PID/Program name for sockets
+
+查询系统里所有占用 9600 端口，或是连接地址包含 9600 的网络连接，同时显示进程 PID、进程名。

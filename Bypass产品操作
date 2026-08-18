@@ -8,6 +8,9 @@ show groups version可以查看group的软件信息
 acl匹配按priority逐个匹配，成功后执行后续动作,匹配后不进行后续后续规则的匹配
 有的bypass设备分强光/弱光两种情况，强光正常走wan、lan口，弱光就只走镜像分光口(mirror/tap)
 改变光功率强弱命令：group preference set 1 profile regular/low-loss(弱光）
+
+常见缩写A = Absent（弱光 / 无光）；W = Working（强光 / 有光）
+
 SNMP中的团体可以理解为权限组，分为只读和读写两种，可通过固定字符串登录
 保护模式切换后的stable_wait时间内，会静默监控功能，防止流量波动
 保护组切换逻辑：

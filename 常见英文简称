@@ -39,3 +39,4 @@ ECPU port	Embedded CPU Port（embedded CPU port）嵌入式CPU端口
 CPU Packet Interface Port（CPI port）：CPU 报文接口端口。CPU 与芯片之间的另一种报文接口，通常用于带外管理或特定控制平面报文通道，与 CPU port 的区别在于传输协议 / 队列映射不同。
 RC port（Recirculation Port）再循环端口。报文处理到一半需要重新进入流水线（如二次查表、隧道封装后再转发、策略路由重定向）时，通过 RC port 将报文送回芯片输入端重新处理。0~10 共 11 个再循环端口，数量越多表示芯片支持的并行回收处理能力越强。
 Resource mode	—	资源模式。single 表示单实例模式（芯片资源作为一个整体使用）；与之相对的是多实例模式（如将一颗芯片虚拟成多台逻辑交换机）。
+TRex（Realistic Traffic Generator）是Cisco 开源、基于 DPDK（专门用于网络数据面报文处理的一个intel开源项目）（Data Plane Development Kit中文：数据平面开发套件） 的高性能软件流量发生器

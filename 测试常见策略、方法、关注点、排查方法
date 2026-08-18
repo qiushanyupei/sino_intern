@@ -36,6 +36,7 @@ send disconnect:Broken pipe意味着路由规则无法满足转发流向，如�
 18)通过cat /etc/cardlabel去看卡真正的型号？
 19）切换槽道single/global模式需要先把本槽道的所有配置清除
 20）uname -a可以查看CPU型号
+21）清楚exact template配置，noexact template all
 
 梯度逼近测试（为了性能拐点）：对于汇聚分流设备要逐渐减小包长，测试pps极限（小包特性是高频率中断，每一个小包都意味着交换芯片需要做一次查表（MAC地址表）、一次转发决策、一次CRC校验。）
 线速（Line Rate） 是指网络设备在某个端口上，能够以该端口支持的最高理论速率，无任何丢包地转发最小字节数据包的能力。

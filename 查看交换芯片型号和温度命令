@@ -1,4 +1,6 @@
-进入芯片sdk命令行：clx_shell_aarch64(云合的交换芯片)
+进入芯片sdk命令行：clx_shell_aarch64(云合的交换芯片)（clx是产品序列前缀）
 查看芯片型号：diag show info chip
 查看芯片温度：swc show temperature
 交换芯片内部通常划分为多个切片，每个切片管理不同部分的流量
+
+ctcshell进入盛科的交换芯片

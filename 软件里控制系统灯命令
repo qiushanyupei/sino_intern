@@ -1,0 +1,10 @@
+点灭
+hwi-cmd led-0 set off
+点亮
+hwi-cmd ed-0 set on green
+慢闪
+hwi-cmd led-0 set slow green
+快闪
+hwi-cmd led-0 set fast green
+
+或者也可以set red，看起来比较明显，该灯根据软件情况恢复配置很快

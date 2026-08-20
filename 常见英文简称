@@ -54,3 +54,4 @@ FPU（Filter Processing Unit，报文过滤 / 分类处理单元）
 ETH macro bitmap 0x00000000 00000FFF：以太网 Macro（PHY/SerDes 硬件宏单元）掩码。
 后半段 00000FFF = 低 12bit 全 1：最多 12 个以太网 MAC/SerDes 通道可用；
 INTR_NFE_ECC = 3520：中断计数器，NFE（Network Fabric Element，片上网络交换矩阵）ECC（error correcting code） 错误中断
+diag 通常指diagnostic的英文缩写

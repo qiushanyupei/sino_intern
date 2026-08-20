@@ -47,7 +47,7 @@ normal：均衡模式，吞吐和延迟折中；
 low_latency：低延迟模式（牺牲部分缓存，降低转发时延）；
 deep_buffer：大缓存模式，应对突发流量，增加时延。
 Die bitmap 0x00000003：Die（裸芯片）掩码，bit0、bit1 置 1，代表 2 个 Die 都启用（双裸片封装）
-Bin bitmap 0x00000001：Bin 良率筛选掩码，bit0=1，代表芯片出厂筛选后启用第一组硬件资源，部分缺陷晶圆会关闭部分资源做 Bin 降级。
+Bin(也有分类筛选的意思) bitmap 0x00000001：有哪些分类筛选资源组被启用
 Plane bitmap 0x00000003：转发平面掩码，bit0/bit1=1，两个转发平面全部启用。
 Slave plane bitmap 0x00000000：从转发平面掩码，0 表示没有配置 Slave 平面，全部为主平面运行，非主从备份架构。
 FPU（Filter Processing Unit，报文过滤 / 分类处理单元）

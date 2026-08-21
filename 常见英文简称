@@ -56,3 +56,4 @@ ETH macro bitmap 0x00000000 00000FFF：以太网 Macro（PHY/SerDes 硬件宏单
 SPI：Serial Peripheral Interface，串行外设接口，一种高速串行总线。没有专用标准接头！它不是像网口、USB 那种看得见的插座，它就是 PCB 板上的 4 根铜皮走线，芯片引脚之间直接相连。
 INTR_NFE_ECC = 3520：中断计数器，NFE（Network Fabric Element，片上网络交换矩阵）ECC（error correcting code） 错误中断
 diag 通常指diagnostic的英文缩写
+RC = Release Candidate，发布候选版，属于软件版本的一种标记，不是正式发布版

@@ -1,6 +1,7 @@
 <img width="761" height="991" alt="2466b294f5144e3bb2a4fa4a4f66192" src="https://github.com/user-attachments/assets/6eca8055-b69f-4063-8b19-4ea96d427563" />
 <br>
-
+<img width="1611" height="805" alt="2f144d99520ff6d4ee6f0a5a4eec1ff" src="https://github.com/user-attachments/assets/6fa316d6-9702-4020-a5fe-6dce78794563" />
+<br>
 TAP口为分光口（Test Access Point）,分光然后用于监测，分光仅是分光信号强度，数据流量不变<br>
 光功率计算公式：10×log（10）（P(mw)/1mw）,在长距离传输过程中可能为负数<br>
 分光比为a:b<br>

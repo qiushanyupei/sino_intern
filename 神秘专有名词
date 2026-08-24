@@ -22,3 +22,4 @@ A3 - 亦庄 - 7750
 亦庄：机房位置（北京亦庄机房）
 A3：机房机位 / 机柜 / 集群编号（运营商内部工程命名，非标准协议名词）
 PE 设备（Provider Edge，运营商边缘设备），属于 MPLS‑VPN 组网里的核心设备，部署在运营商网络的边界，靠近用户侧
+CXMT：ChangXin Memory Technologies长鑫内存科技

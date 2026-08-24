@@ -2,6 +2,10 @@
 <br>
 <img width="1611" height="805" alt="2f144d99520ff6d4ee6f0a5a4eec1ff" src="https://github.com/user-attachments/assets/6fa316d6-9702-4020-a5fe-6dce78794563" />
 <br>
+<img width="803" height="872" alt="4239b3087a6e72a3a464541c0daf897" src="https://github.com/user-attachments/assets/08fd6ede-47f5-460c-9a57-cd6dee748d46" />
+<br>
+以第一个保护组为例，外部WanA的RX给到OS1,然后物理走线到内部光模块的OS1的P13的RX，通过内部交换芯片转到P14TX然后重新沿走线到WanBTX给到仪表。lan口是直接通过外部光模块和内部底板上走线连接。转到Lan口的光也是通过交换芯片<br>
+
 TAP口为分光口（Test Access Point）,分光然后用于监测，分光仅是分光信号强度，数据流量不变<br>
 光功率计算公式：10×log（10）（P(mw)/1mw）,在长距离传输过程中可能为负数<br>
 分光比为a:b<br>

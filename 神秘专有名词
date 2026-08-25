@@ -24,3 +24,4 @@ A3：机房机位 / 机柜 / 集群编号（运营商内部工程命名，非标
 PE 设备（Provider Edge，运营商边缘设备），属于 MPLS‑VPN 组网里的核心设备，部署在运营商网络的边界，靠近用户侧
 CXMT：ChangXin Memory Technologies长鑫内存科技
 I2C Device（从机 / Slave 模式，是一种CPLD工作模式）（**I2C**：Inter‑Integrated Circuit（内部集成电路总线），device这里就是slave的意思）**CPU/COMe 是 I2C Master；XC_CPLD1、XC_CPLD2 就是 I2C‑Device（I2C 从设备）**。
+在欣诺里通常是CPU是SPI主设备，CPLD是SPI从设备

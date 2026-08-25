@@ -1,5 +1,6 @@
 SPI Flash 协议信号定义
 **SCLK**：串行时钟，主机输出，同步数据
-**CS#**：片选，拉低选中 Flash 芯片
+**CS#**(chip selection)：片选，拉低选中 Flash 芯片
+SS也是片选（slice selection）
 - **MOSI**：主机→Flash 发命令 / 地址 / 数据（master output,servent input）
 - **MISO**：Flash→主机 返回数据（master input,servent output）

@@ -57,3 +57,4 @@ SPI：Serial Peripheral Interface，串行外设接口，一种高速串行总�
 INTR_NFE_ECC = 3520：中断计数器，NFE（Network Fabric Element，片上网络交换矩阵）ECC（error correcting code） 错误中断
 diag 通常指diagnostic的英文缩写
 RC = Release Candidate，发布候选版，属于软件版本的一种标记，不是正式发布版
+compromise动词：损坏

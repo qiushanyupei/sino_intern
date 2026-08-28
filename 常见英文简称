@@ -58,3 +58,4 @@ INTR_NFE_ECC = 3520：中断计数器，NFE（Network Fabric Element，片上网
 diag 通常指diagnostic的英文缩写
 RC = Release Candidate，发布候选版，属于软件版本的一种标记，不是正式发布版
 compromise动词：损坏
+**LVM**：Logical Volume Manager中文：**逻辑卷管理器**

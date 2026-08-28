@@ -1,0 +1,27 @@
+BOOT_IMAGE=(hd0,gpt2)/vmlinuz-5.10.134-jmnd1.8 
+grub 语法：`hd0`第一块磁盘，`gpt2`GPT 分区 2，加载该分区下的内核镜像`vmlinuz‑5.10.134‑jmnd1.8`
+
+root=/dev/mapper/ao-root 
+根文件系统位于 LVM 逻辑卷，`ao`是卷组名，`root`是逻辑卷；`/dev/mapper/*`是 LVM 设备映射路径。
+
+ro 
+将文件设为只读状态
+
+crashkernel=auto 
+预留一块内存给 kdump 内核崩溃转储；auto 模式由系统自动计算预留大小，内核 panic 时捕获崩溃现场用于定位死机问题。（`kdump` 是 Linux 的**内核崩溃转储机制**，简单说：**内核挂掉（panic、oops、硬件异常）的时候，把崩溃时刻的内存完整保存下来，用于事后分析内核为什么死机**。）
+
+rd.lvm.lv=ao/root 
+rd → ramdisk， 指 initramfs（initial RAM filesystem）（早期内存文件系统），`rd.*` 都是 initramfs‑stage 的内核参数，只在启动早期 ramdisk 阶段生效
+
+isolcpus=1-17
+**CPU 隔离**：告诉 Linux 内核调度器，**默认不在 1‑17 核上调度普通内核线程、用户进程**。只用来进行数据面业务（**DPDK**：Data Plane Development Kit），不运行管理进程
+nohz_full=1-17 
+No HZ Full是指内核时钟每个周期触发的时钟滴答
+当 1‑17 核上**只运行唯一一个用户态任务、没有其他可调度任务**时，关闭时钟滴答中断
+- 收益：消除频繁时钟中断对数据面的打扰，降低抖动、降低 CPU 功耗，DPDK 收发包低延迟必备。
+- 限制：如果隔离核上跑了多个任务，滴答会重新打开，优化失效。
+rcu_nocbs=1-17
+**全称：RCU No‑Callback CPUs**
+- RCU = Read‑Copy‑Update（读复制更新）
+- nocbs = **No Callbacks**（无回调）
+避免回调（似乎是内核相关）产生软中断

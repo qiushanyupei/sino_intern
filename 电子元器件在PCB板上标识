@@ -1,7 +1,7 @@
 标识	含义	例子
 U	集成电路、芯片（IC）	U1 MCU，U2 电源芯片，U3 运放
 R	电阻	R1、R20
-C	电容	C1、C100
+C	电容	C1、C100（Capacitor）
 L	电感	L1、L2
 D	二极管、LED	D1 稳压管，D2 指示灯
 Q	三极管、MOS 管	Q1 NPN，Q2 MOSFET

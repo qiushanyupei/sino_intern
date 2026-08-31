@@ -1,0 +1,2 @@
+Flash 物理上划分为多个逻辑分区：uboot、kernel、rootfs、app、data、backup 等，每个分区有独立起始地址 + 大小。
+可以烧录多个文件，但是要在不同分区，否则会覆盖

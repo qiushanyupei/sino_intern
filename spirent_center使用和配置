@@ -12,6 +12,9 @@ spirent基本使用：点击chassis->选择第一个->输入仪表ip（27.11）-
 
 清除统计(黄色回环箭头)
 
+默认统计：Port Traffic and Counters->Basic Traffic Results
+查看时延的统计：Streams->Detailed Stream Results
+
 一共物理上只有8个口，按顺序排布，每一组2个物理口，总速率固定，因此单个端口的速率变化时，该组端口个数会变化
 对于100G速率要设置成NRZ模式
 

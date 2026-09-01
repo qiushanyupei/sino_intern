@@ -67,3 +67,6 @@ ADC ：Analog‑to‑Digital Converter，模数转换器。
 timer:定时器是 MCU 内部的硬件外设。
 1. **定时**：到设定时间产生中断，实现周期性任务，比如每隔 1ms 执行一次函数
 区分：硬件定时器（只依靠硬件电路逻辑）（片上外设，精度高，不占用 CPU 循环等待）；软件定时器（靠 CPU 模拟，精度差）。
+**DMIPS**：Dhrystone（整形基准） Millions of Instructions Per Second
+1. Single‑cycle multiplication 单周期乘法- 32 位整数乘法，**只需要 1 个 CPU 时钟周期就能出结果**。
+# SRAM**英文全称：Static Random‑Access Memory，静态随机存取存储器**，相当于运行内存，只要不断电，不需要刷新，数据就保持住

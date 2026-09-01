@@ -62,3 +62,8 @@ compromise动词：损坏
 EMC（Electromagnetic Compatibility，电磁兼容）
 NDA = Non‑Disclosure Agreement保密协议
 Medium‑density通常指Flash等存储芯片的存储密度
+CAN:Controller Area Network，控制器局域网,是一种串行通信总线，专为汽车、工业设备等嵌入式场景设计，用来让板子上多个单片机 / 控制器之间互相收发数据。
+ADC ：Analog‑to‑Digital Converter，模数转换器。
+timer:定时器是 MCU 内部的硬件外设。
+1. **定时**：到设定时间产生中断，实现周期性任务，比如每隔 1ms 执行一次函数
+区分：硬件定时器（只依靠硬件电路逻辑）（片上外设，精度高，不占用 CPU 循环等待）；软件定时器（靠 CPU 模拟，精度差）。

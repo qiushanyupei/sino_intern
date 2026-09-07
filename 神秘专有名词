@@ -36,3 +36,4 @@ Work灯通常是指SYS灯、RUN灯
 焊盘：把元件引脚 / 引脚焊在焊盘上，把零件牢牢固定在板子上，防止晃动、脱落；焊盘底下连着 PCB 走线，焊上锡之后，元件引脚就通过焊盘接到电路走线，实现信号、电源导通
 cortex是Arm厂家设计出来的 CPU 内核
 SMT：Surface‑Mount Technology，表面贴装技术
+Host 规则匹配:匹配HTTP报头里面的Host(域名)

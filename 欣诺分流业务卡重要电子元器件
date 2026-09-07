@@ -1,0 +1,2 @@
+CPU上有一个Flash，没有CPLD，如果设备起不来，可能是CPU的flash没烧或者CPLD没烧
+云豹双颗扣卡正面两个Flash(和imu相关)，背面两个Flash

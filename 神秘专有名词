@@ -37,3 +37,4 @@ Work灯通常是指SYS灯、RUN灯
 cortex是Arm厂家设计出来的 CPU 内核
 SMT：Surface‑Mount Technology，表面贴装技术
 Host 规则匹配:匹配HTTP报头里面的Host(域名)
+提 flash：把板子上 Flash 芯片里面完整的固件、配置、数据全部读出来，保存成 bin/img 镜像文件，叫 “提 flash”

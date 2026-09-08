@@ -6,3 +6,4 @@ link后面加参数
  -f, --force                 remove existing destination files
   -s, --symbolic              make symbolic links instead of hard links
 因为一开始没有系统，所以需要串口登录进去reset导入系统
+镜像是烧录在flash中，或者说只是通过软连接指向系统文件

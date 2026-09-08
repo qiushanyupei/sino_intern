@@ -21,6 +21,7 @@ A3 - 亦庄 - 7750
 7750：诺基亚贝尔（原阿尔卡特）7750 SR 业务路由器（Service Router），运营商大网主流高端路由器硬件平台
 亦庄：机房位置（北京亦庄机房）
 A3：机房机位 / 机柜 / 集群编号（运营商内部工程命名，非标准协议名词）
+
 PE 设备（Provider Edge，运营商边缘设备），属于 MPLS‑VPN 组网里的核心设备，部署在运营商网络的边界，靠近用户侧
 CXMT：ChangXin Memory Technologies长鑫内存科技
 I2C Device（从机 / Slave 模式，是一种CPLD工作模式）（**I2C**：Inter‑Integrated Circuit（内部集成电路总线），device这里就是slave的意思）**CPU/COMe 是 I2C Master；XC_CPLD1、XC_CPLD2 就是 I2C‑Device（I2C 从设备）**。
@@ -38,3 +39,7 @@ cortex是Arm厂家设计出来的 CPU 内核
 SMT：Surface‑Mount Technology，表面贴装技术
 Host 规则匹配:匹配HTTP报头里面的Host(域名)
 提 flash：把板子上 Flash 芯片里面完整的固件、配置、数据全部读出来，保存成 bin/img 镜像文件，叫 “提 flash”
+接有负载，物理链路上电源已经接上了，但是未必上电
+在电路图上电路的两边**L = Live 火线(带电，对地有 220V 交流电压。摸上去会触电。)****N = Neutral 零线(变压器端接地，正常对地电压接近 0V；
+但**零线不等于地线**，零线工作时有电流流过。)**
+地线：PE（Protective Earth，符号⏚）黄绿双色线，保护人身安全，正常没有电流。

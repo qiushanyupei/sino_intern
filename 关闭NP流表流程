@@ -1,0 +1,8 @@
+进入np的ip
+杀掉npp进程
+复制以下命令
+LD_LIBRARY_PATH=/var/run/userapp/lib /root/projx/dpdk-testpmd -l 0-15 -a 0000:01:00.6 -- -i --rxq=15 --txq=15 --rxd=1024 --txd=1024 --burst=32 --forward-mode=io --nb-cores=15
+port stop all
+stop
+port start all
+start

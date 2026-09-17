@@ -51,3 +51,6 @@ Host 规则匹配:匹配HTTP报头里面的Host(域名)
 sip + dip + sport + dport + proto      哪些位参与匹配   转发/丢弃/改包   字节数、包数、老化定时器
 # LAG 口**全称：Link Aggregation Group，链路聚合组**把**多个物理以太网端口捆绑成 1 个逻辑接口**。提升带宽 + 链路冗余；单条成员链路断了，流量自动切到其他链路，业务不中断。
 NHI = **Network Host Interface**，网络主机接口（交换芯片 / 业务芯片面向 CPU / 主机侧的内部接口），可以理解为设备内部网口
+# testpmd行业内一般理解为：**Test Packet Forwarding Engine
+PMD = **Poll Mode Driver**，轮询模式驱动（DPDK 核心网卡驱动模型）
+> testpmd 直译： 报文转发测试工具**,是 DPDK（Data Plane Development Kit，数据平面开发套件）自带的**核心测试样例应用**，是网卡 / DPDK 调试最常用工具

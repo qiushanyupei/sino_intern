@@ -54,3 +54,4 @@ NHI = **Network Host Interface**，网络主机接口（交换芯片 / 业务芯
 # testpmd行业内一般理解为：**Test Packet Forwarding Engine
 PMD = **Poll Mode Driver**，轮询模式驱动（DPDK 核心网卡驱动模型）
 > testpmd 直译： 报文转发测试工具**,是 DPDK（Data Plane Development Kit，数据平面开发套件）自带的**核心测试样例应用**，是网卡 / DPDK 调试最常用工具
+so库：动态共享库shared object

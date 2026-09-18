@@ -6,3 +6,6 @@ port stop all
 stop
 port start all
 start
+
+
+本质上是关掉原有软件，所以关掉了流表，起了testpmd这个新软件

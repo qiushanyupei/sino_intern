@@ -9,3 +9,18 @@ start
 
 
 本质上是关掉原有软件，所以关掉了流表，起了testpmd这个新软件
+-l：绑定使用的逻辑内核
+-a:PCI地址
+--：分隔EAL参数和testpmd参数
+`-i`：interactive，**交互模式**，启动后进入 `testpmd>` 控制台
+`--rxq=15 --txq=15`：**每个端口创建 15 个 RX 队列、15 个 TX 队列**（一般算作是RSS队列）
+--rxd（descriptor）=1024 --txd=1024(表示最多有多少个描述符)
+描述符：网卡硬件里的**环形队列（ring buffer，环缓冲区）** 的表项。网卡和驱动通过描述符来告知对方：数据包放在内存哪个地址、包长度、状态。
+`--burst=32`：一次批量收发包最大 32 个报文（DPDK burst 收发包）
+`--forward-mode=io`：IO 转发模式：**收到报文直接转发，不解析、不改报文内容，性能最高**
+--nb-cores=15（number of cores）执行业务的核数
+testpmd命令行：是典型的复位解复位命令
+port stop all（关掉网卡硬件）
+stop（停止报文转发）
+port start all
+start

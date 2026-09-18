@@ -59,7 +59,7 @@ EAL参数：**英文全称：Environment Abstraction Layer**中文：**环境抽
 ### EAL 负责的能力
 - 管理大页内存（hugepage）、NUMA 内存分配（Non-Uniform Memory Access，非一致内存访问，在多CPU架构下，每个CPU都有各自的一部分内存，访问自己内存快，访问别人内存慢）
 - lcore 逻辑核绑定、CPU 亲和性(硬亲和，即手动设置亲和，会强制保证所有进程都在设定的CPU上执行；linux默认是软亲和，尽量这样)
-- PCI 网卡白名单 / 黑名单、PMD 驱动加载
+- PCI 网卡白名单 / 黑名单、PMD （poll mode driver）驱动加载
 - 多进程模式（primary/secondary）、日志、定时器、原子操作、平台差异屏蔽DPDK
 # LiFi（Light Fidelity，光保真）：**用光（LED 灯光）代替无线电波来无线上网**，是 WiFi 的补充技术，不是用来替代 WiFi 的。
  原理:给 LED 灯加装调制芯片，让灯**每秒几百万次高速明暗闪烁**：亮 = 1，灭 = 0。闪烁极快，人眼完全看不出灯光在闪；设备上的光电传感器捕捉光脉冲，还原成网络数据。

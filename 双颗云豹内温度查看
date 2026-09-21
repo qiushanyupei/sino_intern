@@ -1,0 +1,4 @@
+进云豹Ip
+cd /usr/bin
+./jmtool
+jm_show_tsensor

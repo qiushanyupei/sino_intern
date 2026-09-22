@@ -1,0 +1,4 @@
+hwi-cmd cpld-0 w 0x2a 1/2/3/4
+写几；就意味着串口通第几个扣卡槽位
+然后直接minicom
+cn96xx.local stop/start是复位解复位

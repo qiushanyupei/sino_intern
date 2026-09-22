@@ -93,3 +93,4 @@ GA WA是公安WA = Wireless Access 无线接入
 inner‑sdip‑sdp‑p = inner sip + inner dip + sport 源端口 + dport 目的端口 + protocol 协议号（区分不同网络协议）
 插损：**插入该器件 / 端口链路前后，输出信号功率相比输入信号功率的衰减量**，单位 **dB**
 ffe参数中cn3、cn2等标识中n代表负号，n3即-3，也就是n3是指第-3个n3
+hal_mt_nb（硬件抽象层_Marvell芯片牌子_nb是具体PHY编号）

@@ -8,7 +8,7 @@ port start all
 start
 
 
-本质上是关掉原有软件，所以关掉了流表，起了testpmd这个新软件
+本质上是关掉原有软件，所以关掉了流表，起了testpmd这个新软件，通过stop停止报文转发，然后通过quit退出testpmd程序
 -l：绑定使用的逻辑内核
 -a:PCI地址
 --：分隔EAL参数和testpmd参数

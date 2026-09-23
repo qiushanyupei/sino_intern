@@ -96,3 +96,5 @@ ffe参数中cn3、cn2等标识中n代表负号，n3即-3，也就是n3是指第-
 hal_mt_nb（硬件抽象层_Marvell芯片牌子_nb是具体PHY编号）
 SIP：**Session Initiation Protocol****会话初始协议**，是 **应用层信令协议**，3GPP IMS/VoLTE 体系的核心控制协议，用来**建立、修改、终止多媒体会话**。
 MW接口：3GPP（Third Generation Partnership Project**，全球通讯组织指定的一套规范）的一种特殊接口编号，是IMS 域内**P-CSCF ↔ I-CSCF ↔ S-CSCF**之间的接口（CSCF 全称：Call Session Control Function，呼叫会话控制功能，p指代理，一般是接入的入口,I指Interrogating查询，查路由，进行转发；s指服务，主要处理业务逻辑）
+网元：逻辑单位，能独立完成一类网络功能、可以被网管单独管理
+网管：**逻辑上是一套管理平台**。网管管理多个网元

@@ -98,3 +98,4 @@ SIP：**Session Initiation Protocol****会话初始协议**，是 **应用层信
 MW接口：3GPP（Third Generation Partnership Project**，全球通讯组织指定的一套规范）的一种特殊接口编号，是IMS 域内**P-CSCF ↔ I-CSCF ↔ S-CSCF**之间的接口（CSCF 全称：Call Session Control Function，呼叫会话控制功能，p指代理，一般是接入的入口,I指Interrogating查询，查路由，进行转发；s指服务，主要处理业务逻辑）
 网元：逻辑单位，能独立完成一类网络功能、可以被网管单独管理
 网管：**逻辑上是一套管理平台**。网管管理多个网元
+RCS：**Rich Communication Suite（也叫 Rich Communication Services），中文：富媒体通信套件 / 富通信服务，国内运营商商用名称叫「5G 消息」**。

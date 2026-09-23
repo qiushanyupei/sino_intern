@@ -84,3 +84,4 @@ PSBC = Packet Session Border Controller，分组域会话边界控制器
 **ATCF：Access Transfer Control Function** 接入转换控制功能（信令面）（Control Plane）
 **ATGW：Access Transfer Gateway** 接入转换网关（媒体面）（User Plane）
 **话单CDR = Call Detail Record，呼叫详细记录**
+SMS：short message，传统短信

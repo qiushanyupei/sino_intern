@@ -1,0 +1,8 @@
+进入主控root权限下
+然后跳转到1槽的线卡上
+hwi-cmd url://cpld-0 w 0x12 1（w几就是跳转到几槽上）
+minicom
+root/123456
+cd /app
+./startup 手动起引流app
+通过admin/admin@stn.ct登录到命令行配置界面

@@ -80,3 +80,7 @@ TLS流= Transport Layer Security，传输层安全协议；旧版叫 SSL（Secur
 DPE = Data Plane Engine
 VRF:VPN Routing and Forwarding
 **IMS**：**IP Multimedia Subsystem**，中文：**IP 多媒体子系统**，4G VoLTE、IMS 短信的核心网子系统
+PSBC = Packet Session Border Controller，分组域会话边界控制器
+**ATCF：Access Transfer Control Function** 接入转换控制功能（信令面）（Control Plane）
+**ATGW：Access Transfer Gateway** 接入转换网关（媒体面）（User Plane）
+**话单CDR = Call Detail Record，呼叫详细记录**

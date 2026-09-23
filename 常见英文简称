@@ -79,3 +79,4 @@ TLS流= Transport Layer Security，传输层安全协议；旧版叫 SSL（Secur
 **SCLK**：Serial Clock，串行同步时钟，SPI/I2C/SerDes/ 背板串行总线的移位时钟（通过移位时钟控制读取信号的时机，避免发送方、接收方读取信息时间不同，电平乱跳，干扰读取信息）（信号质量差会导致板卡常常失联）
 DPE = Data Plane Engine
 VRF:VPN Routing and Forwarding
+**IMS**：**IP Multimedia Subsystem**，中文：**IP 多媒体子系统**，4G VoLTE、IMS 短信的核心网子系统

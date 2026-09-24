@@ -1,0 +1,4 @@
+1.报文是否转到I口
+2.规则是否下到np show npp app_rules/app_rules_resource 
+3.np的命中计数是否符合预期 
+4,show npp parser_statistics 报文解析是否跟预期一致

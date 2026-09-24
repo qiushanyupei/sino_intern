@@ -99,3 +99,12 @@ MW接口：3GPP（Third Generation Partnership Project**，全球通讯组织指
 网元：逻辑单位，能独立完成一类网络功能、可以被网管单独管理
 网管：**逻辑上是一套管理平台**。网管管理多个网元
 RCS：**Rich Communication Suite（也叫 Rich Communication Services），中文：富媒体通信套件 / 富通信服务，国内运营商商用名称叫「5G 消息」**。
+**SOCKS = Socket Secure**，会话层通用代理协议，常用版本 SOCKS4 / SOCKS5（SOCKS5 支持 TCP+UDP、认证、IPv6）
+- 原理：不解析应用层内容，只转发原始 socket 流量，**通用代理**（和 HTTP 代理不一样，HTTP 代理只能处理 http）
+- 用途：
+  1. 客户端流量经过 socks 代理服务器中转，隐藏源 IP；
+  2. 穿越防火墙，内网主机通过 socks 访问外部网络；
+  3. 支持浏览器、SSH、FTP、游戏、P2P(Peer-to-Peer，对等网络**重点：**P2P 是应用架构模型，不是单一传输层协议，TCP、UDP 都能用**概念：节点对等，每台终端既是客户端（下载 / 接收），又是服务端（上传 / 发送），不依赖单一中央服务器。) 等几乎所有 TCP/UDP 应用；
+npp:Network Packet Processor
+IEEE 802.1ag 标准本体叫 CFM：Connectivity Fault Management，连通故障管理
+N口：Network口，可能是NPP内部口

@@ -86,3 +86,12 @@ PSBC = Packet Session Border Controller，分组域会话边界控制器
 **话单CDR = Call Detail Record，呼叫详细记录**
 SMS：short message，传统短信
 ATCA机框：Advanced Telecommunications Computing Architecture（先进电信计算架构）
+HLS协议：HTTP Live Streaming，网页流媒体（苹果推的，直播 / 点播）
+HDS协议：HTTP Dynamic Streaming，Adobe 的流媒体
+FLV：Flash Video，流媒体封装格式
+ONVIF：摄像头监控协议（Open Network Video Interface Forum，开放网络视频接口论坛，是一套控制与发现协议，控制NVR发现同网段IPC，协商音视频流发送），IPC（IP Camera，网络摄像机）、NVR（Network Video Recorder，网络视频录像机） 之间音视频、设备发现；一般是IPC把音视频发送给NVR
+NP报文处理语境：**MEP = Micro Engine Processor，微报文引擎处理器**
+**DRDA**：Distributed Relational Database Architecture，分布式关系型数据库架构（IBM 数据库通信协议）
+**DB2**：IBM DB2（数据库产品名，全称没有扩展缩写，DB2 本身就是产品名称，底层使用 DRDA 协议通信）
+CFD：Connectivity Fault Detection，连通故障检测,华三等厂商通常用来称呼交换机，好奇怪
+OAM：Operations, Administration and Maintenance，操作、管理、维护，是运维通用术语

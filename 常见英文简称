@@ -95,3 +95,4 @@ NP报文处理语境：**MEP = Micro Engine Processor，微报文引擎处理器
 **DB2**：IBM DB2（数据库产品名，全称没有扩展缩写，DB2 本身就是产品名称，底层使用 DRDA 协议通信）
 CFD：Connectivity Fault Detection，连通故障检测,华三等厂商通常用来称呼交换机，好奇怪
 OAM：Operations, Administration and Maintenance，操作、管理、维护，是运维通用术语
+# ASIC**Application-Specific Integrated Circuit**中文：**专用集成电路**

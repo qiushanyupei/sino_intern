@@ -108,3 +108,5 @@ RCS：**Rich Communication Suite（也叫 Rich Communication Services），中�
 npp:Network Packet Processor
 IEEE 802.1ag 标准本体叫 CFM：Connectivity Fault Management，连通故障管理
 N口：Network口，可能是NPP内部口
+Tofino:Barefoot（现被Intel收购）交换芯片
+ctc:国产盛科交换芯片

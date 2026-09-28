@@ -22,3 +22,6 @@ SNMP的四种核心请求：GET、SET、GETNEXT、GETBULK（批量获取OID信�
 SNMP MIB文件常见定义形式：OBJECT-IDENTITY用于定义OID树的中间节点，不可读写；MODULE-IDENTITY定义模块信息，不可读写；OBJECT-TYPE定义MIB中可读写的具体变量（唯一一种可读写的定义形式）
 
 
+在telnet之前设置永久ip:
+system mgmt add-addr eth1 192.168.1.200 255.255.255.0
+system mgmt set-gateway 192.168.1.1

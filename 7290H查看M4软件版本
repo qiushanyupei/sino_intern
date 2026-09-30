@@ -1,5 +1,5 @@
 ip link add link eth2 name vlan126 type vlan id 126
-ip addr add 126.0.1.100 dev vlan126
+ip addr add 126.0.1.100/24 dev vlan126
 ip  link  set  vlan126  up
 telnet  126.0.1.1
 账密：admin/admin

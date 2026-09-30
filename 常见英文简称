@@ -97,3 +97,5 @@ CFD：Connectivity Fault Detection，连通故障检测,华三等厂商通常用
 OAM：Operations, Administration and Maintenance，操作、管理、维护，是运维通用术语
 # ASIC**Application-Specific Integrated Circuit**中文：**专用集成电路**
 # PISA**Protocol-Independent Switch Architecture**中文：**协议无关交换机架构**
+CS规则：Class Selector（CS，类别选择器，DSCP(**全称：Differentiated Services Code Point**,用来表示Qos优先级的一个字段。中文：**差分服务代码点** 的一类编码）)
+# SNI 信息规则**英文全称：Server Name Indication**服务器名称指认，是IP头部的一个字段

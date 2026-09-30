@@ -99,3 +99,5 @@ OAM：Operations, Administration and Maintenance，操作、管理、维护，�
 # PISA**Protocol-Independent Switch Architecture**中文：**协议无关交换机架构**
 CS规则：Class Selector（CS，类别选择器，DSCP(**全称：Differentiated Services Code Point**,用来表示Qos优先级的一个字段。中文：**差分服务代码点** 的一类编码）)
 # SNI 信息规则**英文全称：Server Name Indication**服务器名称指认，是IP头部的一个字段
+# IMSI**英文全称：International Mobile Subscriber Identity**中文：**国际移动用户识别码**
+IMSI 是**运营商给手机 SIM 卡分配的唯一身份编号**，相当于 SIM 卡的 “身份证号”，存放在 SIM 卡内部。

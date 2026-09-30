@@ -101,3 +101,10 @@ CS规则：Class Selector（CS，类别选择器，DSCP(**全称：Differentiate
 # SNI 信息规则**英文全称：Server Name Indication**服务器名称指认，是IP头部的一个字段
 # IMSI**英文全称：International Mobile Subscriber Identity**中文：**国际移动用户识别码**
 IMSI 是**运营商给手机 SIM 卡分配的唯一身份编号**，相当于 SIM 卡的 “身份证号”，存放在 SIM 卡内部。
+APN(access point name)：通常也是通讯协议中的字段
+##  IMEI**全称：International Mobile Station Equipment Identity，国际移动设备识别码（手机串号）**- 含义：**终端硬件设备身份证**，烧录在手机 / 模组硬件里；IMSI 是 SIM 卡身份，IMEI 是设备身份。
+## LACCI（LAC+CI 组合，2G/3G 位置信息）- LAC：**Location Area Code，位置区码**（2G/3G，16bit，0~65535）- CI：**Cell Identity，小区标识**
+用于按地理位置分区对流量做处理
+## MSISDN**全称：Mobile Subscriber ISDN（Integrated Services Digital Network，综合业务数字网） Number，移动用户 ISDN 号，就是手机号**
+## 5GSD（5GSD = S-NSSAI，很多厂商板卡简写叫 5GSD，5G 切片标识）
+**S-NSSAI：Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息，工程上简称 5GSD**，也算是一种可以流筛的字段

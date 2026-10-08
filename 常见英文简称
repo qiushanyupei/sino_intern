@@ -110,3 +110,4 @@ APN(access point name)：通常也是通讯协议中的字段
 **S-NSSAI：Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息，工程上简称 5GSD**，也算是一种可以流筛的字段
 IFG：**Inter-Frame Gap**（帧间隙，以太网帧与帧之间的间隔，网络测试仪 / 400G 仪表常用指标）
 # LLB：Local Loopback（本地芯片环回）
+Rx Acterna 帧：**板卡收到了来自 Acterna 测试仪发出的专用测试帧**是一家公司所特殊定制的帧

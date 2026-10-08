@@ -108,3 +108,4 @@ APN(access point name)：通常也是通讯协议中的字段
 ## MSISDN**全称：Mobile Subscriber ISDN（Integrated Services Digital Network，综合业务数字网） Number，移动用户 ISDN 号，就是手机号**
 ## 5GSD（5GSD = S-NSSAI，很多厂商板卡简写叫 5GSD，5G 切片标识）
 **S-NSSAI：Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息，工程上简称 5GSD**，也算是一种可以流筛的字段
+IFG：**Inter-Frame Gap**（帧间隙，以太网帧与帧之间的间隔，网络测试仪 / 400G 仪表常用指标）

@@ -12,10 +12,6 @@ DMC0/1: 16 GB/ch, 2Rx8, SODIMM, 32-bit data, non-ECC
 表示一个 每个通道16GB 容量的 SODIMM 内存条。它使用 2Rx8 （Roll表示列，×8表示每个数据位为8位/颗）的组织结构，数据位宽 32-bit，并且 不带 ECC 纠错功能
 SODIMM ：Small Outline Dual In-line Memory Module(（小外形双列直插式内存模块）常用小尺寸内存模块)
 2R×8表示2组内存颗粒，每一个内存颗粒的数据接口宽度是8位。
-ECC:error correcting code，用于修复但比特数据错误
+ECC:error correcting code，用于修复比特数据错误
 minicom退出方法:按完ctrl+a，然后按x
 
-
-如果串口没起来，可能是硬盘没装对的系统，或是硬盘没插
-如果ip没识别，而且硬盘的串口没起来，可能是CPU问题或扣卡问题或硬盘没刷系统问题
-看扣卡能不能起来主要还是看内部口有没有起来

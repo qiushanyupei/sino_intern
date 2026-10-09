@@ -1,0 +1,2 @@
+常见网页端端口号：8086
+修改ip:vim /etc/network/interfaces

@@ -113,3 +113,4 @@ IFG：**Inter-Frame Gap**（帧间隙，以太网帧与帧之间的间隔，网�
 Rx Acterna 帧：**板卡收到了来自 Acterna 测试仪发出的专用测试帧**是一家公司所特殊定制的帧
 IPMI：Intelligent Platform Management Interface，智能平台管理接口，是一套带外协议管理标准
 DMC：Device Management Controller，设备管理控制器,是带外管理网口
+SCP：**System Control Processor**，系统控制处理器

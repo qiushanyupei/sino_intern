@@ -32,7 +32,7 @@ PCN（Product Change Notification）产品变更通知
 BGA（Ball Grid Array）球栅阵列封装。引脚不是两侧排布，而是芯片底部以矩阵形式排布锡球（焊球）；DDR、FLASH、主控芯片背面大量采用该封装；日常说的植球（Reball），就是重新制作 BGA 底部锡球。
 pcs-pieces，也就是指“片”
 SAI（Switch Abstraction Interface，交换机抽象接口）
-Network Packet Broker（NPB）：流量分发器，好像可以负责流量去重
+Network Packet Broker(中介)（NPB）：流量分发器，好像可以负责流量去重
 revision：通常指修订版本
 ECPU port	Embedded CPU Port（embedded CPU port）嵌入式CPU端口
 CPU Packet Interface Port（CPI port）：CPU 报文接口端口。CPU 与芯片之间的另一种报文接口，通常用于带外管理或特定控制平面报文通道，与 CPU port 的区别在于传输协议 / 队列映射不同。

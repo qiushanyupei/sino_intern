@@ -2,3 +2,4 @@ win+r->mstsc，输入ip去登录
 mstsc 就是 **通过 IP（内网 IP 居多）连接目标 Windows 主机，拿到对方完整图形化桌面**
 **Microsoft Terminal Services Client**
 中文：**微软终端服务客户端**Microsoft ...
+输入ip后->点击显示选项->点击本地资源->点击详细信息->点击驱动器加号->选择要导入的存储盘

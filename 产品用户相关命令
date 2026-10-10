@@ -1,6 +1,3 @@
-以下是配置系统：
-配置永久ip：按照生产区文档中FL-SFC7132C_STP中mgmt命令
-
 以下是配置转发规则：
 
 内部原理：fwd到A端口其实是将数据流放到A端口的发送队列
@@ -58,7 +55,7 @@ GRE到达分流汇聚设备，根据目的地ip和端口ip进行匹配，有匹�
 剥离vxlan隧道头部（在虚拟交换机（vSwitch）、Open vSwitch（OVS）、物理交换机（ToR switch）、云主机 Hypervisor、KVM / VMware ESXi、容器网络节点（K8s CNI））中使用）
 剥离ipinip隧道头部（嵌套ip头）（用于Kubernetes 容器网络）（优点：头部最小（20B）、性能最好（无 UDP/GRE 解析）、实现简单、Linux 内核原生支持）
 协议识别+统计
-规则配置（和action-set有联动）（NP是指network processor，似乎对于数据包的高级处理都在里面）（规则配置包括基础规则以及高级规则，基础规则在交换上实现，高级规则在NP上实现，基础规则与高级规则的action独立使用，即基础规则只能绑定基础action，高级规则只能绑定高级action，基础action能实现的在NP里高级action均可实现。）
+规则配置（和action-set有联动）（规则配置包括基础规则以及高级规则，基础规则在交换上实现，高级规则在NP上实现，基础规则与高级规则的action独立使用，即基础规则只能绑定基础action，高级规则只能绑定高级action，基础action能实现的在NP里高级action均可实现。）
 删除命令就是前面加no 后面是要删除的内容，后面加all
 基础匹配规则（数据流中的包匹配成功后执行规则）主要由交换实现，主要包括ethernet-type匹配，vlan匹配，mac层信息匹配，IP五元组规则、传输层长度规则、TCPflag规则、分片报文规则、组合规则
 可以使用掩码匹配（掩码匹配规则：mask为1处需要完全匹配，其他无所谓）（不使用掩码默认全掩）

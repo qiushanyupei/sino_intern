@@ -1,0 +1,3 @@
+用nmcli device status确定网络状态
+然后用nmtui进入GUI配置界面，添加的device名称和mac需要和ip a里面的对应上。Profile name随意
+然后配置Addresses和Gateway

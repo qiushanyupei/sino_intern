@@ -1,0 +1,3 @@
+禁用了sshd
+把设置里的no改成yes
+然后systemctl restart sshd

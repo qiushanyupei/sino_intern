@@ -1,3 +1,6 @@
 禁用了sshd
-把设置里的no改成yes
-然后systemctl restart sshd
+1、把设置里的no改成yes
+openeuler里是vim /etc/ssh/sshd_config
+PermitRootLogin yes
+PasswordAuthentication yes
+2、systemctl restart sshd

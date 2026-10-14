@@ -1,0 +1,38 @@
+相关概念：
+CPU socket是一个物理CPU
+NUMA（Non-Uniform Memory Access）：CPU核心访问其他其他CPU核心插槽上的内存，是通过总线跨过CPU，然后再访问内存
+一个 NUMA 节点 = 一组 CPU 核心 + 这组 CPU 直连的本地内存 + 隶属于该 CPU 的 PCIe 根控制器
+而网卡是PCIe设备，挂在PCIe的根控制器上
+不同的NUMA节点间互相访问内存会出现NUMA现象
+
+
+以下这部分DPDK环境初始化脚本
+modprobe vfio-pci
+加载内核模块 `vfio‑pci`   **VFIO = Virtual Function I/O**（虚拟功能 I/O）
+**原理**：VFIO 是 Linux 内核用户态 PCI 设备直通框架，DPDK 使用 vfio‑pci 驱动，把网卡从内核驱动剥离，交给 DPDK 用户态进程直接接管硬件寄存器，绕过内核协议栈，实现高性能报文收发。
+echo 1 > /sys/module/vfio/parameters/enable_unsafe_noiommu_mode
+开启 **unsafe_noiommu_mode（不安全无 IOMMU 模式）**，允许vfio-pci在没有IOMMU的情况下启动
+echo never > /sys/kernel/mm/transparent_hugepage/enabled
+`never`：**完全关闭透明大页**，DPDK 推荐配置；# 透明大页 THP（Transparent Huge Page）
+**作用：内核自动把多个 4K 小页合并成 2MB 大页，应用无需改代码，透明使用大页
+- 核心收益：减少页表项，**降低 TLB miss**，对内存密集型业务提升性能
+echo -1 > /proc/sys/kernel/sched_rt_runtime_us；；；RT = Real-Time，实时
+默认值例如 950000：表示每 1s 周期内，**实时调度类进程最多占用 950msCPU 时间，剩下 50ms 留给普通 CFS 进程**# **全称：Completely Fair Scheduler（完全公平调度器）**只能处理普通进程
+设置为`-1`：**取消 RT 时间配额限制**不修改这个值，跑满CPU一段时间后会被内核强制节流，造成报文丢包
+sysctl -w vm.zone_reclaim_mode=0
+- `vm.zone_reclaim_mode`：内存域回收模式，NUMA 架构服务器参数。
+- NUMA 机器，每个 NUMA 节点有本地内存；当本节点内存不足，zone_reclaim 开启时，内核会优先回收本节点内存，而不是去远端 NUMA 节点分配内存。
+`0`：关闭 zone reclaim，允许跨 NUMA 分配内存，DPDK 标准配置。
+./dpdk-hugepages.py -r 30G
+`-r 30G`：**Reserve，预留总共 30GB 的 Hugepage 大页内存给 DPDK 使用**。
+
+以下是绑定NUM0网口打流命令：
+./dpdk-devbind.py -b vfio-pci  enp125s0f0 enp125s0f1
+让这两个网口脱离内核协议栈，绑定 VFIO 框架，DPDK testpmd 才能接管硬件收发报文。
+./dpdk-testpmd -l 4-31 -n 4 --socket-mem 2048,0 --proc-type=auto --file-prefix=test1 -- -i --rxq=10 --txq=10 --rxd=1024 --txd=1024 --nb-cores=10
+-n：内存通道数：4；和硬件实际通道数一致就行
+`--socket-mem 2048,0`       NUMA 节点分配大页内存：**Socket0 分配 2048MB 大页；Socket1 分配 0MB**，全部内存都从 node0 分配；这种情况一般是进程都分配在socket0的NUMA节点，避免跨节点出现NUMA现象
+--proc-type=auto    自动识别主进程/辅进程
+`--file-prefix=test1`大页文件前缀，用来区分多套 DPDK 实例。
+start
+port config all rss all

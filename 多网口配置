@@ -1,6 +1,6 @@
 对于主控卡
 首先mgmt multi enable
-然后mgmt multi enable 0-4
+然后mgmt multi enable 0-4，才能启用具体的网口，具体的网口才会在ip a中出现
 0对应ethx, 1对应mgmt1，2对应mgmt2 ，3对应mgmt3，4对应mgmt4
   mgmt multi set 1 ip 192.168.27.123/24 via 192.168.27.1
   set 后面的id是对应多网口的0-4 5个网口

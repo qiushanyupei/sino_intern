@@ -1,0 +1,5 @@
+mkdir -p /dev/huge
+mount -t hugetlbfs none /dev/huge
+echo 24 > /proc/sys/vm/nr_hugepages
+dpdk-devbind.py -b vfio-pci 0002:02:00.0
+dpdk-testpmd -l 2-23 -n 2  -- -i --rxq=20 --txq=20 -a --nb-cores=21 --forward-mode=io

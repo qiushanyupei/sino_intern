@@ -106,12 +106,12 @@ RCS：**Rich Communication Suite（也叫 Rich Communication Services），中�
   2. 穿越防火墙，内网主机通过 socks 访问外部网络；
   3. 支持浏览器、SSH、FTP、游戏、P2P(Peer-to-Peer，对等网络**重点：**P2P 是应用架构模型，不是单一传输层协议，TCP、UDP 都能用**概念：节点对等，每台终端既是客户端（下载 / 接收），又是服务端（上传 / 发送），不依赖单一中央服务器。) 等几乎所有 TCP/UDP 应用；
 npp:Network Packet Processor
-IEEE 802.1ag 标准本体叫 CFM：Connectivity Fault Management，连通故障管理
+IEEE 802.1ag（ag纯是序列号） 标准本体叫 CFM：Connectivity Fault Management，连通故障管理
 N口：Network口，可能是NPP内部口
 Tofino:Barefoot（现被Intel收购）交换芯片
 ctc:国产盛科交换芯片
 **pcap = packet capture，数据包捕获**，既是**文件格式名**，也是一套**抓包库 / API**，是网络抓包最基础标准。
 **发包 pcap**：把 pcap 文件导入测试仪（思博伦、IXIA，或者 testpmd、trex）**回放流量**
 # 标称比特率定义：**理想参考时钟下，发送器每秒应当发送的比特数量，是标准规定的理论额定速率**
-旋转合规含义：多通道并行 SerDes（如 400G DR4，4 条 lane），发送端的 4 条通道数据会做 lane 旋转重排；接收端 PHY 必须按照同样规则反向旋转，恢复原始比特序。
+旋转合规含义（Layer1,物理层）：多通道并行 SerDes（如 400G DR4，4 条 lane），发送端的 4 条通道数据会做 lane 旋转重排；接收端 PHY 必须按照同样规则反向旋转，恢复原始比特序。
 `jaguar` = 云豹（云豹智能 DPU 代号 Jaguar）

@@ -1,1 +1,18 @@
 登录进扣卡->sensors
+
+scmi_sensors-virtual-0
+ARM架构常见SCMI（System Control and Management Interface） 协议虚拟传感器
+Adapter: Virtual device
+vdd_core:     803.00 mV 
+SoC 核心域供电电压
+vdd_sys:      920.00 mV 
+系统域供电电压，一般是 SoC 内部总线、控制单元、小核、外设控制器等共用电源轨
+vdd_ddr:        1.20 V  
+DDR 内存主供电
+vdd_ddr_dig:    0.00 V  
+DDR 内存数字域主供电
+Thrml_Margin:  +56.0 C  
+热余量，距离温度上限的温度值，越小越危险
+Chip_Temp:     +49.0 C  
+Chip_1s_Pwr:   21.45 W  
+芯片包 1 秒平均功耗

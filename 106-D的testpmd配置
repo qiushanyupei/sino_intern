@@ -1,5 +1,16 @@
 mkdir -p /dev/huge
+`-p`：递归创建父目录；**目录已存在时不会报错**，创建挂载点hugetlbfs
 mount -t hugetlbfs none /dev/huge
+指定文件系统类型为大页文件系统,这个文件系统不在硬盘里，在内存里；这个文件系统不需要块设备，所以写none
+原理：DPDK 通过在这个目录下创建文件，mmap (Linux 系统调用 `mmap()`，把文件 / 设备物理内存映射到进程虚拟地址空间，DPDK 用它映射大页物理内存到用户态)映射获得物理连续大页内存，减少 TLB(**Translation Lookaside Buffer**中文：转译后备缓冲区（页表缓存）) miss，大幅提升报文转发性能。
+⚠️ 注意：这条命令**只挂载默认大小的大页**（默认一般是 2MB）；如果要 1GB 大页，需要额外加参数 `pagesize=1G`。
 echo 24 > /proc/sys/vm/nr_hugepages
+`/proc/sys/vm/nr_hugepages` 是内核 sysctl 接口，用于**申请预留大页数量**
+- vm = virtual memory（虚拟内存子系统）
+- nr = **number of**
+- `echo 24`：告诉内核，预留 **24 个大页**
+- 大页大小：默认是 2MB / 页 → 24 × 2MB = **48MB 大页内存**
 dpdk-devbind.py -b vfio-pci 0002:02:00.0
+`0002:02:00.0`：**PCI BDF (**全称：Bus-Device-Function)地址**（总线：设备。功能），代表要操作的网卡 PCI 设备。
 dpdk-testpmd -l 2-23 -n 2  -- -i --rxq=20 --txq=20 -a --nb-cores=21 --forward-mode=io
+-n：内存通道数；和硬件实际通道数一致就行

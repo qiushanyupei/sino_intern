@@ -7,7 +7,7 @@ NUMA（Non-Uniform Memory Access）：CPU核心访问其他其他CPU核心插槽
 
 
 以下这部分DPDK环境初始化脚本
-modprobe vfio-pci
+modprobe vfio-pci（mod指module，指内核模块；probe是探查的意思）
 加载内核模块 `vfio‑pci`   **VFIO = Virtual Function I/O**（虚拟功能 I/O）
 **原理**：VFIO 是 Linux 内核用户态 PCI 设备直通框架，DPDK 使用 vfio‑pci 驱动，把网卡从内核驱动剥离，交给 DPDK 用户态进程直接接管硬件寄存器，绕过内核协议栈，实现高性能报文收发。
 echo 1 > /sys/module/vfio/parameters/enable_unsafe_noiommu_mode

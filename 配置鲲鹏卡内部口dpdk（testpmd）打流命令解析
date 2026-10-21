@@ -12,16 +12,19 @@ modprobe vfio-pci（mod指module，指内核模块；probe是探查的意思）
 **原理**：VFIO 是 Linux 内核用户态 PCI 设备直通框架，DPDK 使用 vfio‑pci 驱动，把网卡从内核驱动剥离，交给 DPDK 用户态进程直接接管硬件寄存器，绕过内核协议栈，实现高性能报文收发。
 echo 1 > /sys/module/vfio/parameters/enable_unsafe_noiommu_mode
 开启 **unsafe_noiommu_mode（不安全无 IOMMU 模式）**，允许vfio-pci在没有IOMMU的情况下启动
+iommu是Input/Output Memory Management Unit，**是给 PCIe 网卡 / SSD 这类 DMA 设备用的 MMU**，负责**IO 虚拟地址 (IOVA) → 物理地址 PA**，同时做 DMA 访问隔离保护。
+noiommu情况下，**没有地址翻译、没有 DMA 隔离**，网卡 DMA 可以直接读写整机任意物理内存，所以名字带 `unsafe`，**不安全**
 echo never > /sys/kernel/mm/transparent_hugepage/enabled
 `never`：**完全关闭透明大页**，DPDK 推荐配置；# 透明大页 THP（Transparent Huge Page）
 **作用：内核自动把多个 4K 小页合并成 2MB 大页，应用无需改代码，透明使用大页
-- 核心收益：减少页表项，**降低 TLB miss**，对内存密集型业务提升性能
+- 核心收益：减少页表项，**降低 TLB miss**，对内存密集型业务提升性能。**全称：Translation Lookaside Buffer，转译后备缓冲区（常叫页表缓存）**
+属于 CPU MMU 内部的高速缓存，专门缓存**虚拟地址 ↔ 物理地址**的映射条目。
 echo -1 > /proc/sys/kernel/sched_rt_runtime_us；；；RT = Real-Time，实时
 默认值例如 950000：表示每 1s 周期内，**实时调度类进程最多占用 950msCPU 时间，剩下 50ms 留给普通 CFS 进程**# **全称：Completely Fair Scheduler（完全公平调度器）**只能处理普通进程
 设置为`-1`：**取消 RT 时间配额限制**不修改这个值，跑满CPU一段时间后会被内核强制节流，造成报文丢包
 sysctl -w vm.zone_reclaim_mode=0
 - `vm.zone_reclaim_mode`：内存域回收模式，NUMA 架构服务器参数。
-- NUMA 机器，每个 NUMA 节点有本地内存；当本节点内存不足，zone_reclaim 开启时，内核会优先回收本节点内存，而不是去远端 NUMA 节点分配内存。
+- NUMA 机器，每个 NUMA 节点有本地内存；当本节点内存不足，zone_reclaim 开启时，内核会优先回收本节点内存，而不是去远端 NUMA 节点分配内存。所以分配内存的进程会被回收进程的内存卡住，如果可以直接分配其他NUMA节点的内存，会快很多
 `0`：关闭 zone reclaim，允许跨 NUMA 分配内存，DPDK 标准配置。
 ./dpdk-hugepages.py -r 30G
 `-r 30G`：**Reserve，预留总共 30GB 的 Hugepage 大页内存给 DPDK 使用**。

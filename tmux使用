@@ -1,0 +1,5 @@
+在shell里，执行tmux new -s np2(你随便起的名字)      ---->创建新的后台终端（-s是指socket path，也就是指子终端路径）
+ctrl+B+D退出
+在shell，使用命令打开你创建的后台终端tmux a -t np2(你随便起的名字)
+**a**：是子命令 `attach-session` 的简写，链接一个后台已经存在的中断
+**-t**：是 target 的缩写，**指定目标对象**

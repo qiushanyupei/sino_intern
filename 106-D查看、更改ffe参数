@@ -1,4 +1,4 @@
-查看和修改参数的命令都要进入串口
+查看和修改参数的命令都要进入串口，进串口的脚本也是sdjm800_minicom.sh
 serdes-cli-cn10k show m all all tx rx pm
 查看参数和预期不符，就改
 serdes-cli-cn10k set m 0 0 -m 45 -e -8 -o -6

@@ -1,0 +1,7 @@
+fpga:
+1、登录线卡
+fpga read 0
+fpga read 1
+CPLD和M4：
+1、登录线卡
+2、get device info

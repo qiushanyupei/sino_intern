@@ -40,4 +40,11 @@ HTTP/2 在 TCP 之上；HTTP 本身归类是应用层。
 > | N14 | AMF ↔ AMF | HTTP/2 | AMF 之间移动性、上下文传递 |
 > | N15 | PCF ↔ UDM | HTTP/2 | PCF 读取用户签约策略 |
 > | N16 | SMF ↔ SMF | HTTP/2 | SMF 之间会话迁移 |
+N26：AMF ↔ MME，基于 GTPv2-C，4/5G 互操作切换接口，**保活消息就是 Echo Request / Echo Response**；；MME：Mobility Management Entity，移动管理实体
+GTPv2-C：GPRS Tunnelling Protocol version 2 - Control plane
+N26 接口所有 GTPv2-C 报文，应该带 VLAN226 标签
 > 补充空口：**Uu 口**：UE ↔ gNB（5G 空口，不是 N 开头）
+S6a：MME ↔ HSS，Diameter（协议名称），SCTP 端口 **3868****HSS**：Home Subscriber Server，家庭用户服务器
+> - Gx（3GPP 参考点名称，一个Diameter接口）：PGW ↔ PCRF，Diameter；；；**PGW**：Packet Data Network Gateway；；**PCRF**：Policy and Charging Rules Function，策略与计费规则功能
+> - Rx：AF ↔ PCRF，Diameter
+**Diameter 是电信移动网的下一代 AAA（Authentication 鉴权、Authorization 授权、Accounting 计费）信令协议，RADIUS 的升级版，4G LTE/IMS 核心网大量使用，底层一般跑 SCTP（端口 3868）或 TCP**

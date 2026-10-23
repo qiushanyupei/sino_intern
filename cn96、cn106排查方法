@@ -1,4 +1,5 @@
-hwi-cmd cpld-0 w 0x2a 1/2/3/4    (可能SFC7154LC上特殊的寄存器)
+hwi-cmd cpld-0 w 0x2a 1/2/3/4    (SFC7154LC上特殊的寄存器或者7960L上)
+如果是在7960HQ上和云豹进入串口的方式一致
 写几；就意味着串口通第几个扣卡槽位
 然后直接minicom
 cn96xx.local stop/start是复位解复位

@@ -113,3 +113,6 @@ Rx Acterna 帧：**板卡收到了来自 Acterna 测试仪发出的专用测试�
 IPMI：Intelligent Platform Management Interface，智能平台管理接口，是一套带外协议管理标准
 DMC：Device Management Controller，设备管理控制器,是带外管理网口
 SCP：**System Control Processor**，系统控制处理器
+3GPP TS：- 3rd Generation Partnership Project，第三代合作伙伴计划- **TS**：Technical Specification，技术规范。这个计划由不同国家的组织合作制定
+### SCTP**Stream Control Transmission Protocol**，流控制传输协议
+### LTE**Long Term Evolution**，长期演进（4G）

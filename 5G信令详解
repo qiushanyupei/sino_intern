@@ -1,0 +1,43 @@
+功能上类似于会话层+应用层
+1. **NGAP（N2：gNB ↔ AMF）**NG Application Protocol（Next Generation Application Protocol，下一代应用协议）
+### AMF**Access and Mobility Management Function**，接入和移动性管理功能
+### gNB**next Generation NodeB**，下一代基站（5G 基站）
+底层：IP + UDP + GTP-C（GPRS Tunnelling Protocol for Control plane，GPRS 隧道协议）
+**GPRS**：General Packet Radio Service，通用分组无线业务
+NGAP 本身：**属于应用层消息**（3GPP 定义它是应用协议），不是会话层。
+1. **NAS（N1：UE ↔ AMF，封装在 NGAP 里）**Non-Access Stratum，非接入层；User Equipment
+NAS 是非接入层信令，也是**应用层性质的控制消息**，负责注册、鉴权、会话管理。
+2. **PFCP（N4：SMF ↔ UPF）**
+**PFCP**：Packet Forwarding Control Protocol，分组转发控制协议
+**SMF**：Session Management Function，会话管理功能
+**UPF**：User Plane Function，用户面功能
+IP+UDP 承载，PFCP 协议本身是应用层控制协议。
+3. **SBI 接口（N11/N16 等，AMF/SMF 之间，HTTP/2 + JSON）**SBI：Service Based Interface，基于服务的接口
+HTTP/2 在 TCP 之上；HTTP 本身归类是应用层。
+> HTTP/2 自带流（stream）、会话（session）机制，**HTTP/2 的 session/stream 才有点像 OSI 会话层的能力**，但 SBI 里的 Nsmf_PDUSession 这类服务消息（信令）依然是 HTTP 之上的应用业务。
+
+常见接口：
+> | 接口 | 两端网元 | 协议 | 简要作用 |
+> | ---- | ---- | ---- | ---- |
+> | N1 | UE ↔ AMF | NAS | UE 和核心网控制面，传 NAS 信令（注册、PDU 会话等） |
+> | N2 | gNB ↔ AMF | NGAP | 基站和 AMF 控制面 |
+> | N3 | gNB ↔ UPF | GTP-U | 用户面，业务数据转发 |GPRS Tunnelling Protocol - User plane
+> | N4 | SMF ↔ UPF | PFCP | 会话管理、UPF 规则下发（PDR/FAR/QER） |
+**PDR**：Packet Detection Rule，报文检测规则
+- **FAR**：Forwarding Action Rule，转发动作规则
+- **QER**：QoS Enforcement Rule，QoS 执行规则
+> | N5 | AF ↔ PCF | 无单独固定协议 | 应用功能和策略控制 |
+- **AF**：Application Function，应用功能
+- **PCF**：Policy Control Function，策略控制功能
+> | N6 | UPF ↔ DN | IP | UPF 到数据网络（互联网 / 企业内网） |Data Network，数据网络
+> | N7 | SMF ↔ PCF | HTTP/2 | SMF 向 PCF 请求策略 |
+> | N8 | AMF ↔ AUSF | HTTP/2 | AMF 鉴权相关 |AUSF：Authentication Server Function，鉴权服务器功能
+> | N9 | UPF ↔ UPF | GTP-U | 跨 UPF 转发、会话锚点切换 |
+> | N10 | SMF ↔ AUSF | HTTP/2 | SMF 鉴权、密钥获取 |
+> | N11 | AMF ↔ SMF | HTTP/2 | AMF 和 SMF 之间会话交互 |
+> | N12 | AMF ↔ NSSF | HTTP/2 | 切片选择 |Network Slice Selection Function，网络切片选择功能
+> | N13 | AMF ↔ UDM | HTTP/2 | 用户签约数据查询 |Unified Data Management，统一数据管理
+> | N14 | AMF ↔ AMF | HTTP/2 | AMF 之间移动性、上下文传递 |
+> | N15 | PCF ↔ UDM | HTTP/2 | PCF 读取用户签约策略 |
+> | N16 | SMF ↔ SMF | HTTP/2 | SMF 之间会话迁移 |
+> 补充空口：**Uu 口**：UE ↔ gNB（5G 空口，不是 N 开头）

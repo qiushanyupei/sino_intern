@@ -122,3 +122,4 @@ SCP：**System Control Processor**，系统控制处理器
 **CPE**：Customer Premises Equipment，用户驻地设备。比如 5G CPE，就是放在用户侧、把蜂窝信号转 WiFi / 有线的终端设备。
 ### SOD（实际是 SODIMM，口语简写 SOD）**全称：Small Outline Dual In-line Memory Module**
 **Serial Presence Detect**中文：串行存在检测。就是读取内存条上那颗小 EEPROM 芯片，存着内存容量、频率、时序、电压等参数，开机 BIOS 读取它来自动配置内存。
+ETSI：European Telecommunications Standards Institute（欧洲电信标准协会）

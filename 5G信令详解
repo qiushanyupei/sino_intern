@@ -48,3 +48,9 @@ S6a：MME ↔ HSS，Diameter（协议名称），SCTP 端口 **3868****HSS**：H
 > - Gx（3GPP 参考点名称，一个Diameter接口）：PGW ↔ PCRF，Diameter；；；**PGW**：Packet Data Network Gateway；；**PCRF**：Policy and Charging Rules Function，策略与计费规则功能
 > - Rx：AF ↔ PCRF，Diameter
 **Diameter 是电信移动网的下一代 AAA（Authentication 鉴权、Authorization 授权、Accounting 计费）信令协议，RADIUS 的升级版，4G LTE/IMS 核心网大量使用，底层一般跑 SCTP（端口 3868）或 TCP**
+# EBI**全称：EPS Bearer Identifier，中文：EPS 承载标识
+- EPS = Evolved Packet System（演进分组系统，也就是 4G LTE 的分组域体系）；给手机提供 IP 连接；用「EPS 承载（EPS Bearer）」做 QoS 管控；内置移动性、鉴权、计费、策略
+- 取值范围：**5～15**，是一个短小整数 ID
+ARP（Allocation and Retention Priority，分配保留优先级）
+在 4G 里原本是 MME 分配 EBI；5G NSA 架构下，由 AMF 承接这个分配功能，SMF 调用这个`assign-ebi`接口向 AMF 申领 EBI；
+一个 EBI 对应一条 EPS 承载，用来区分不同 QoS、不同业务的数据流，保证 QoS 调度、数据包转发

@@ -1,3 +1,5 @@
+106-D想起testpmd不能有软件，否则软件会自动占用大页内存，没办法起dpdk
+
 mkdir -p /dev/huge
 `-p`：递归创建父目录；**目录已存在时不会报错**，创建挂载点hugetlbfs
 mount -t hugetlbfs none /dev/huge
@@ -14,3 +16,5 @@ dpdk-devbind.py -b vfio-pci 0002:02:00.0
 `0002:02:00.0`：**PCI BDF (**全称：Bus-Device-Function)地址**（总线：设备。功能），代表要操作的网卡 PCI 设备。
 dpdk-testpmd -l 2-23 -n 2  -- -i --rxq=20 --txq=20 -a --nb-cores=21 --forward-mode=io
 -n：内存通道数；和硬件实际通道数一致就行
+
+

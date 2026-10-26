@@ -13,7 +13,8 @@ echo 24 > /proc/sys/vm/nr_hugepages
 - nr = **number of**
 - `echo 24`：告诉内核，预留 **24 个大页**
 - 大页大小：默认是 2MB / 页 → 24 × 2MB = **48MB 大页内存**
-dpdk-devbind.py -b vfio-pci 0002:02:00.0
+dpdk-devbind.py -b vfio-pci 0002:02:00.0(一个dpu对应一个内部口)
+dpdk-devbind.py -b vfio-pci 0002:02:00.0 0002:03:00.0（一个dpu对应两个内部口）
 `0002:02:00.0`：**PCI BDF (**全称：Bus-Device-Function)地址**（总线：设备。功能），代表要操作的网卡 PCI 设备。
 dpdk-testpmd -l 2-23 -n 2  -- -i --rxq=20 --txq=20 -a --nb-cores=21 --forward-mode=io
 -n：内存通道数；和硬件实际通道数一致就行

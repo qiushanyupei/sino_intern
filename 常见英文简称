@@ -125,3 +125,4 @@ SCP：**System Control Processor**，系统控制处理器
 ETSI：European Telecommunications Standards Institute（欧洲电信标准协会）
 **SUPI**: **Subscription Permanent Identifier**，订阅永久标识（对应 4G IMSI，用户卡 / 签约身份）
 **PEI**: **Permanent Equipment Identifier**，永久设备标识（对应 4G IMEI，终端硬件身份）
+TEID = Tunnel Endpoint Identifier，**隧道端点标识符**是5G/4G 用户面 GTP 隧道里，用来区分**这条 GTP 包属于哪个用户隧道**

@@ -122,3 +122,4 @@ ctc:国产盛科交换芯片
 **netif = network interface，网络接口结构体**，是 lwIP 协议栈用来抽象一块网卡的核心对象
 网络风暴：数据包在交换机之间传递，导致数据包越来越多，逐渐沾满交换机/网络资源，导致网络卡顿，华为交换机就会自动down掉端口
 wcps：万Connections Per Second
+SIGSEGV 是 Linux/Unix 系统中的一种信号，英文全称是 Segmentation Violation,类似于Segmentation Fault

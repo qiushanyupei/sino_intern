@@ -1,2 +1,2 @@
-cd /app/rc
+cat /app/rc/platform.ini
 然后按照盒式设备（7156C）的方法配置

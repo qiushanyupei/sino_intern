@@ -124,3 +124,4 @@ ctc:国产盛科交换芯片
 wcps：万Connections Per Second
 SIGSEGV 是 Linux/Unix 系统中的一种信号，英文全称是 Segmentation Violation,类似于Segmentation Fault
 mqtt：Message Queuing Telemetry Transport。消息队列遥测传输协议。采用发布/订阅模式，通常运行在 TCP/IP 之上,很轻量。由发布者，中间服务器，订阅者组成。主要用于工业传感器数据传输
+流表跟随：让某条流量的后续报文继续按照之前确定的处理路径或规则进行处理

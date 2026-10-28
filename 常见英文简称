@@ -126,3 +126,22 @@ ETSI：European Telecommunications Standards Institute（欧洲电信标准协�
 **SUPI**: **Subscription Permanent Identifier**，订阅永久标识（对应 4G IMSI，用户卡 / 签约身份）
 **PEI**: **Permanent Equipment Identifier**，永久设备标识（对应 4G IMEI，终端硬件身份）
 TEID = Tunnel Endpoint Identifier，**隧道端点标识符**是5G/4G 用户面 GTP 隧道里，用来区分**这条 GTP 包属于哪个用户隧道**
+AH	Authentication Header	认证头	为 IP 报文提供数据完整性、数据源认证等安全保护
+ESP	Encapsulating Security Payload	封装安全载荷	为 IP 报文提供加密、完整性校验、数据源认证等安全保护
+GTP — GPRS（General Packet Radio Service） Tunnelling Protocol
+Ethernet
+└── Outer IPv4
+    └── UDP (Dst Port = 2152)
+        └── GTP-U (基本头部 8 Byte)
+            └── Inner IPv4
+                └── TCP
+                    └── Application Data
+L2TP	Layer 2 Tunneling Protocol	第二层隧道协议	通过 IP 网络建立二层隧道，常用于 VPN 接入
+Ethernet
+└── Outer IPv4
+    └── UDP (Dst Port = 1701)
+        └── L2TPv2
+            └── PPP
+                └── Inner IPv4
+                    └── TCP / UDP
+                        └── Application Data

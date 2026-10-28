@@ -3,3 +3,5 @@ ctrl+B+D退出
 在shell，使用命令打开你创建的后台终端tmux a -t np2(你随便起的名字)
 **a**：是子命令 `attach-session` 的简写，链接一个后台已经存在的中断
 **-t**：是 target 的缩写，**指定目标对象**
+tmux detach可以暂时退出
+exit可以直接杀掉当前session

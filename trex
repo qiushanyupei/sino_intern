@@ -1,0 +1,7 @@
+./t-rex-64 --cfg socket0_gyx.yaml -f post-reset-ipv6-new-20260617-80G+https.yaml -c 20 -m 7 -d 60
+./t-rex-64	启动 TRex 程序
+--cfg socket0_gyx.yaml	指定基础配置文件
+-f post-reset-ipv6-new-20260617-80G+https.yaml	指定流量配置文件(f指file)
+-c 20	设置每个数据面核心的使用数量/核心参数
+-m 7	设置流量倍数，multiple
+-d 60	设置持续时间，60秒

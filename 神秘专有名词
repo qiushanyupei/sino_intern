@@ -126,3 +126,4 @@ SIGSEGV 是 Linux/Unix 系统中的一种信号，英文全称是 Segmentation V
 mqtt：Message Queuing Telemetry Transport。消息队列遥测传输协议。采用发布/订阅模式，通常运行在 TCP/IP 之上,很轻量。由发布者，中间服务器，订阅者组成。主要用于工业传感器数据传输
 流表跟随：让某条流量的后续报文继续按照之前确定的处理路径或规则进行处理
 模糊匹配：按一定规则进行的匹配，不是精确匹配，匹配的规则是自定义的
+如果在写acl规则时出现base l5，base l4。就是匹配网路第几层的报文

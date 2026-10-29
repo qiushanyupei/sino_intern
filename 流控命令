@@ -1,0 +1,16 @@
+针对交换上的各个端口，编号不按用户面的面板口来，按照交换的编号来
+port 88 flow-ctl both enable
+
+port 90 flow-ctl both enable
+
+port 92 flow-ctl both enable
+
+port 94 flow-ctl both enable
+
+port 80 flow-ctl both enable
+
+port 82 flow-ctl both enable
+
+port 84 flow-ctl both enable
+
+port 86 flow-ctl both enable

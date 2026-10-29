@@ -1,0 +1,5 @@
+查看systemd journal 日志
+journalctl -k -b -1
+-k	只查看内核日志，相当于 --dmesg
+-b	指定启动周期（boot）
+-1 查看上一次启动，-0查看本次启动

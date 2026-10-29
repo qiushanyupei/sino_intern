@@ -147,3 +147,4 @@ Ethernet
                         └── Application Data
 DoIP：Diagnostics over Internet Protocol，基于 IP 的诊断协议。- 主要用于汽车电子领域，通过以太网/IP 网络进行车辆诊断通信。
 UDS：Unified Diagnostic Services，统一诊断服务。- 是一种车辆诊断服务协议
+DPE = Data Plane Process Engine

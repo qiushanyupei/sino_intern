@@ -2,3 +2,4 @@ tcpreplay -i S1-F4 -M 100 pri_2_0721.pcap
 -i:指定发送接口
 -M 100；指定回放速率；-M 是 --mbps 的简写
 -t表示topspeed，指以尽可能最高速率回放
+-l表示loopback，数字写几就是回放几轮，如果取0就是无线循环

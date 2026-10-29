@@ -152,3 +152,5 @@ BFD： Bidirectional Forwarding Detection，中文通常称为双向转发检测
 IP FRR ：IP Fast Reroute， IP 快速重路由。用于在链路或下一跳设备发生故障时，尽可能快速地切换到备用转发路径，减少丢包和业务中断。
 IEPL : International Ethernet Private Line，中文一般称为国际以太网专线。
 udf:User-Defined Field（用户自定义字段）
+regexp : Regular Expression,指正则表达式
+rtp:real-time protocol

@@ -154,3 +154,4 @@ IEPL : International Ethernet Private Line，中文一般称为国际以太网�
 udf:User-Defined Field（用户自定义字段）
 regexp : Regular Expression,指正则表达式
 rtp:real-time protocol
+GDB（GNU操作系统 Debugger，GNU 调试器）

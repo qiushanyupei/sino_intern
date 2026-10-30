@@ -78,7 +78,7 @@ EAL参数：**英文全称：Environment Abstraction Layer**中文：**环境抽
 - 工业车间、油气工厂（避免射频引爆风险）
 - 车联网：车灯之间互相通信（V2V）
 - 高密度办公空间，分担 WiFi 压力
-# RSS英文全称：Receive Side Scaling，中文：接收端扩展，俗称网卡 RSS 多队列
+# RSS英文全称：Receive Side Scaling，中文：接收端扩展，俗称网卡 RSS 多队列。RSS Key帮助设备对网络报文进行哈希分流。
 是**网卡硬件**实现的流量分流技术：
 1. 网卡内置多个硬件rx queue；
 2. 网卡硬件提取报文**四元组 / 五元组**（源 IP、目的 IP、源端口、目的端口，可选协议号）做 Toeplitz 哈希（RSS常用，存储占用空间小）；

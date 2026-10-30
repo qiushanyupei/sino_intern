@@ -1,0 +1,3 @@
+使用smartctl
+sudo smartctl -l selftest /dev/sda
+-l查看指定的log

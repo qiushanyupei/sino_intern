@@ -1,2 +1,3 @@
 lsblk：查看硬盘容量（**list block devices**，翻译：列出块设备）
 df -h -T，-T会附带硬盘分区的类型
+即disk free查看磁盘剩余空间

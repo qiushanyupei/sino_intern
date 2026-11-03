@@ -4,4 +4,5 @@
 
 set sfp_poll enable
 set sfp_tx enable
+set sfp_rst reset
 set sfp_rst normal

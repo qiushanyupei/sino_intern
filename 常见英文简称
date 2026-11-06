@@ -158,3 +158,5 @@ GDB（GNU操作系统 Debugger，GNU 调试器）
 IDCISP ：Internet Data Center Internet Service Provider，即：互联网数据中心互联网服务提供商。
 RTE：runtime environment
 NPC	Network Parser and Classifier	网络解析与分类器
+变异系数 CV（Coefficient of Variation），也称为离散系数。越大说明数据波动越大
+Mil：通常是million的简称

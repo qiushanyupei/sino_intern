@@ -129,3 +129,4 @@ mqtt：Message Queuing Telemetry Transport。消息队列遥测传输协议。�
 如果在写acl规则时出现base l5，base l4。就是匹配网路第几层的报文
 **PRBS**全称：**Pseudo-Random Binary Sequence**中文：伪随机二进制序列；是设备芯片内部产生的一串看起来随机、但有固定周期的 0/1 码流，**用来灌到这条走线 / SerDes 链路里，测通道好不好**：收端比对，统计误码 BER、看眼图、调均衡
 mtk：台湾芯片厂家
+tid通常是指tunnel id

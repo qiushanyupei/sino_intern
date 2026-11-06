@@ -1,0 +1,2 @@
+配置网口的ipv6地址时，会触发邻居发现协议，发送 Neighbor Solicitation（邻居请求）报文，检查是否有人已经使用这个 IPv6 地址。
+邻居有使用，就会发送NA（Neighbor Advertisement）

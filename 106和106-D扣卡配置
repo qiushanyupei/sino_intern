@@ -10,3 +10,4 @@ link后面加参数
 
 106需要userapp和Image两个软连接
 106-D只需要Image就可以运行好像，因为是用testpmd打流
+建立新链接Image后需要重启才能生效

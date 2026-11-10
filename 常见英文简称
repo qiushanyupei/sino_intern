@@ -161,3 +161,5 @@ NPC	Network Parser and Classifier	网络解析与分类器
 变异系数 CV（Coefficient of Variation），也称为离散系数。越大说明数据波动越大
 Mil：通常是million的简称
 Power Distribution Unit，电源分配单元
+eMMC（Embedded MultiMediaCard） 就是集成了存储芯片和管理控制器的存储器件，常用于嵌入式设备、交换机、路由器、工控设备
+**PCIe：Peripheral Component Interconnect Express**抖音百科中文：外围组件快速互连

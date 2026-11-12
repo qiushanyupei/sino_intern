@@ -1,0 +1,38 @@
+base l5即从第四层的payload（也就是第五层的协议）开始匹配
+ipv4 proto 6/0xf：匹配 IPv4 头里协议字段等于 6。掩码是`/0xf` = 掩码`00001111`
+
+以下这段规则能够让同一个outgroup内的内部口各自承担，进行负载均衡。hash算法可能不够均衡，因为是计算结果
+port 5/i/1-8 breakout 2X50G
+fan set control-auto enable
+outgroup 1 port 5/I/1.1,5/I/2.1
+outgroup 2 port 5/I/3.1,5/I/4.1
+outgroup 3 port 5/I/5.1,5/I/6.1
+outgroup 4 port 5/I/7.1,5/I/8.1
+
+copygroup 1 hash-group 1-4
+
+port 5/F/58 copy copygroup 1
+
+以下是rr的负载均衡写法（RR = Round Robin，中文：轮询调度）就是按顺序逐个发包，绝对均衡
+port 2/I/1-8.0 breakout 2X50G
+port 2/I/1-8.1 type FP
+
+ingroup 1  port 2/F/1.0
+ingroup 2  port 2/F/2.0
+ingroup 3  port 2/F/3.0
+ingroup 4  port 2/F/4.0
+
+outgroup 1 port 2/I/1-2.1
+outgroup 2 port 2/I/3-4.1
+outgroup 3 port 2/I/5-6.1
+outgroup 4 port 2/I/7-8.1
+
+acl action-set 1  fwd outgroup 1 load-balance rr
+acl action-set 2  fwd outgroup 2 load-balance rr
+acl action-set 3  fwd outgroup 3 load-balance rr
+acl action-set 4  fwd outgroup 4 load-balance rr
+
+acl rule 1  action-set 1  ingroup 1 
+acl rule 2  action-set 2  ingroup 2 
+acl rule 3  action-set 3  ingroup 3 
+acl rule 4  action-set 4  ingroup 4 

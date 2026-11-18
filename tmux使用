@@ -1,3 +1,5 @@
+安装：rpm -ivh tmux-3.2a-3.oe2203sp3.aarch64.rpm
+
 在shell里，执行tmux new -s np2(你随便起的名字)      ---->创建新的后台终端（-s是指socket path，也就是指子终端路径）
 ctrl+B+D退出
 在shell，使用命令打开你创建的后台终端tmux a -t np2(你随便起的名字)

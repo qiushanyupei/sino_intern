@@ -168,3 +168,4 @@ FL:full test
 SIP：Session Initiation Protocol，会话初始协议，用于建立、管理和结束多媒体通信会话
 RTP：Real-time Transport Protocol，实时传输协议，用于传输实时音频、视频等数据。
 RTCP：Real-time Transport Control Protocol，实时传输控制协议。主要用于对 RTP 数据传输进行监控和控制
+SUPI 的英文全称是 Subscription Permanent Identifier，中文通常译为用户永久标识符，是5G专属

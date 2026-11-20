@@ -4,3 +4,6 @@ md5sum -c 文件.md5
 cn9k.tar.gz: OK
 cn9k.tar.gz: FAILED
 md5sum: WARNING: 1 computed checksum did NOT match
+
+md5sum -c <(curl -s http://192.168.27.187:8080/latest/npp-2024-gz/cn9k.tar.gz.md5)
+这条命令是用管道的方式把下载下来的md5文件给md5sum命令使用

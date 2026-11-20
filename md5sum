@@ -1,0 +1,6 @@
+md5sum -c 文件.md5
+-c是check,然后计算文件的md5值和已存储的md5值，看是否相同
+一般有两种结果：
+cn9k.tar.gz: OK
+cn9k.tar.gz: FAILED
+md5sum: WARNING: 1 computed checksum did NOT match

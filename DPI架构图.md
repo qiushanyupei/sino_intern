@@ -5,3 +5,4 @@ IS(Information Security)<br>
 NS(Network Security)<br>
 DS(Data Security)<br>
 upload疑似一个用于上传的软件功能模块<br>
+部分IS(信安)是通过接口机传输日志

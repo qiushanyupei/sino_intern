@@ -5,4 +5,6 @@ IS(Information Security)<br>
 NS(Network Security)<br>
 DS(Data Security)<br>
 upload疑似一个用于上传的软件功能模块<br>
-部分IS(信安)是通过接口机传输日志
+部分IS(信安)是通过接口机传输日志<br>
+EU:execution unit(执行端）<br>
+<img width="1326" height="700" alt="image" src="https://github.com/user-attachments/assets/3dc73b64-2fb8-495f-b0dd-b0b27fe4fa2d" /><br>

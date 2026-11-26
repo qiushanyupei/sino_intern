@@ -1,0 +1,6 @@
+控制的都是.service服务单元（用来控制进程执行）
+ondemand:**Linux CPUFreq 的一种调频策略（governor，调频调节器），“按需调频”**
+- `cpufrequtils.service`：cpufrequtils 工具包配套服务，用来初始化 CPU 调频
+- `loadcpufreq.service`：早期用来加载 cpufreq 驱动模块的服务
+
+关闭以上服务就可以实现CPU自动超频，避免内核崩溃

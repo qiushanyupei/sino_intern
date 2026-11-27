@@ -1,0 +1,2 @@
+刚上电时出现channel X Training Failed基本上就是内存报错
+因为在嵌入式 / 服务器 Boot ROM、EBF、SPL 里，DDR 初始化流程标准叫法就是 DDR training

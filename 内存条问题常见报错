@@ -1,2 +1,5 @@
 刚上电时出现channel X Training Failed基本上就是内存报错
 因为在嵌入式 / 服务器 Boot ROM、EBF、SPL 里，DDR 初始化流程标准叫法就是 DDR training
+- **Boot ROM**：Boot Read‑Only Memory（常直接叫 BootROM，片内固化的第一级启动代码）
+- **EBF（CN10K 日志里这个）**：文档没有公开标准展开全称；行业 / SDK 语境理解为 **Early Boot Firmware**（早期启动固件，就是你截图里打印版本的这一段，做 DDR、PLL（**PLL：Phase-Locked Loop**中文：锁相环简单一句话用途：用一个参考时钟，生成稳定、可调频的高频时钟）、SerDes 等早期初始化）。
+- **SPL**：**Secondary Program Loader**，第二阶段程序加载器
